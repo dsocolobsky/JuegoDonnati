@@ -1,0 +1,125 @@
+
+atlas.png
+size: 512,512
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+button_config
+  rotate: false
+  xy: 406, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+button_left
+  rotate: false
+  xy: 406, 4
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+button_right
+  rotate: false
+  xy: 428, 437
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+character
+  rotate: false
+  xy: 2, 132
+  size: 148, 369
+  orig: 148, 369
+  offset: 0, 0
+  index: -1
+chest_blue
+  rotate: false
+  xy: 152, 136
+  size: 90, 105
+  orig: 90, 105
+  offset: 0, 0
+  index: -1
+chest_green
+  rotate: false
+  xy: 244, 136
+  size: 90, 105
+  orig: 90, 105
+  offset: 0, 0
+  index: -1
+chest_red
+  rotate: false
+  xy: 336, 136
+  size: 90, 105
+  orig: 90, 105
+  offset: 0, 0
+  index: -1
+game_four
+  rotate: false
+  xy: 2, 2
+  size: 200, 128
+  orig: 200, 128
+  offset: 0, 0
+  index: -1
+game_one
+  rotate: false
+  xy: 152, 373
+  size: 200, 128
+  orig: 200, 128
+  offset: 0, 0
+  index: -1
+game_three
+  rotate: false
+  xy: 152, 243
+  size: 200, 128
+  orig: 200, 128
+  offset: 0, 0
+  index: -1
+game_two
+  rotate: false
+  xy: 204, 6
+  size: 200, 128
+  orig: 200, 128
+  offset: 0, 0
+  index: -1
+square_blue
+  rotate: false
+  xy: 354, 437
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+square_green
+  rotate: false
+  xy: 428, 371
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+square_red
+  rotate: false
+  xy: 354, 371
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+triangle_blue
+  rotate: false
+  xy: 428, 305
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+triangle_green
+  rotate: false
+  xy: 354, 305
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+triangle_red
+  rotate: false
+  xy: 428, 239
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
