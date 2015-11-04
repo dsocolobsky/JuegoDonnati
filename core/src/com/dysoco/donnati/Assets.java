@@ -32,6 +32,8 @@ public class Assets {
     public static AtlasRegion TRIANGLE_GREEN;
     public static AtlasRegion TRIANGLE_BLUE;
 
+    public static AtlasRegion MEMOCARD_BACK;
+
     public static void load() {
         atlas = new TextureAtlas(Gdx.files.internal("textures/atlas.atlas"));
 
@@ -58,6 +60,8 @@ public class Assets {
         TRIANGLE_BLUE = new AtlasRegion(atlas.findRegion("triangle_blue"));
         TRIANGLE_GREEN = new AtlasRegion(atlas.findRegion("triangle_green"));
         TRIANGLE_RED = new AtlasRegion(atlas.findRegion("triangle_red"));
+
+        MEMOCARD_BACK = new AtlasRegion(atlas.findRegion("memocard_back"));
     }
 
 }

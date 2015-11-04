@@ -55,6 +55,16 @@ public class MenuScreen extends Screen {
         stage.addActor(gameOne);
 
         gameTwo = new Button(new TextureRegion(Assets.GAME_TWO), 560, 320, 200, 128);
+
+        gameTwo.addListener(new InputListener() {
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                juego.setScreen(new MemoScreen(juego));
+                return false;
+            }
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+            }
+        });
+
         stage.addActor(gameTwo);
 
         gameThree = new Button(new TextureRegion(Assets.GAME_THREE), 300, 140, 200, 128);

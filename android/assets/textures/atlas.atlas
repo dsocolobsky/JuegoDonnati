@@ -1,26 +1,26 @@
 
 atlas.png
-size: 512,512
+size: 1024,512
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
 button_config
   rotate: false
-  xy: 406, 70
+  xy: 556, 330
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 button_left
   rotate: false
-  xy: 406, 4
+  xy: 648, 437
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 button_right
   rotate: false
-  xy: 428, 437
+  xy: 336, 177
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
@@ -41,84 +41,91 @@ chest_blue
   index: -1
 chest_green
   rotate: false
-  xy: 244, 136
+  xy: 556, 396
   size: 90, 105
   orig: 90, 105
   offset: 0, 0
   index: -1
 chest_red
   rotate: false
-  xy: 336, 136
+  xy: 244, 136
   size: 90, 105
   orig: 90, 105
   offset: 0, 0
   index: -1
 game_four
   rotate: false
-  xy: 2, 2
+  xy: 152, 373
   size: 200, 128
   orig: 200, 128
   offset: 0, 0
   index: -1
 game_one
   rotate: false
-  xy: 152, 373
+  xy: 152, 243
   size: 200, 128
   orig: 200, 128
   offset: 0, 0
   index: -1
 game_three
   rotate: false
-  xy: 152, 243
+  xy: 354, 373
   size: 200, 128
   orig: 200, 128
   offset: 0, 0
   index: -1
 game_two
   rotate: false
-  xy: 204, 6
+  xy: 354, 243
   size: 200, 128
   orig: 200, 128
   offset: 0, 0
   index: -1
+memocard_back
+  rotate: false
+  xy: 2, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
 square_blue
   rotate: false
-  xy: 354, 437
+  xy: 556, 264
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 square_green
   rotate: false
-  xy: 428, 371
+  xy: 714, 437
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 square_red
   rotate: false
-  xy: 354, 371
+  xy: 402, 177
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 triangle_blue
   rotate: false
-  xy: 428, 305
+  xy: 780, 437
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 triangle_green
   rotate: false
-  xy: 354, 305
+  xy: 468, 177
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 triangle_red
   rotate: false
-  xy: 428, 239
+  xy: 846, 437
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
