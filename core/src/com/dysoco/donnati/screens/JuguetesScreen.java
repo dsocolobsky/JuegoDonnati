@@ -1,37 +1,25 @@
 package com.dysoco.donnati.screens;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
-import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
-import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.dysoco.donnati.Assets;
-import com.dysoco.donnati.Chest;
-import com.dysoco.donnati.Juego;
-import com.dysoco.donnati.Juguete;
+import com.dysoco.donnati.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class JuguetesScreen extends ScreenAdapter {
+public class JuguetesScreen extends Screen {
 
     public static enum ChestColor {
         BLUE, GREEN, RED
     }
 
-    final Juego juego;
-    Stage stage;
-
     ArrayList<Chest> chests;
     ArrayList<Juguete> juguetes;
 
     public JuguetesScreen(final Juego juego) {
-        this.juego = juego;
-
-        stage = new Stage(new FitViewport(juego.WINDOW_WIDTH, juego.WINDOW_HEIGHT), juego.batch);
+        super(juego);
 
         chests = new ArrayList<Chest>();
         chests.add(new Chest(ChestColor.BLUE));

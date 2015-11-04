@@ -1,31 +1,15 @@
 package com.dysoco.donnati.screens;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputMultiplexer;
-import com.badlogic.gdx.ScreenAdapter;
-import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.PerspectiveCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
-import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
-import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.dysoco.donnati.Assets;
-import com.dysoco.donnati.Button;
-import com.dysoco.donnati.Juego;
-import com.dysoco.donnati.Player;
+import com.dysoco.donnati.*;
 
-public class MenuScreen extends ScreenAdapter {
+public class MenuScreen extends Screen {
 
-    final Juego juego;
-    Stage stage;
     Player player;
     Button editButton;
     Image fondo;
@@ -36,9 +20,7 @@ public class MenuScreen extends ScreenAdapter {
     Button gameFour;
 
     public MenuScreen(final Juego juego) {
-        this.juego = juego;
-
-        stage = new Stage(new FitViewport(juego.WINDOW_WIDTH, juego.WINDOW_HEIGHT), juego.batch);
+        super(juego);
 
         fondo = new Image(Assets.FONDO_TEXTURE);
         stage.addActor(fondo);
