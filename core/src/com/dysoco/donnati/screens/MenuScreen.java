@@ -74,31 +74,4 @@ public class MenuScreen extends Screen {
         stage.addActor(gameFour);
     }
 
-    @Override
-    public void show(){
-        super.show();
-
-        Gdx.input.setInputProcessor(stage);
-    }
-
-    @Override
-    public void resize(int width, int height) {
-        stage.getViewport().update(width, height, true);
-    }
-
-    @Override
-    public void render(float delta) {
-        Gdx.gl.glClearColor(0, 0, 0.0f, 1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
-        stage.act(delta);
-
-        stage.draw();
-    }
-
-    @Override
-    public void dispose() {
-        stage.dispose();
-    }
-
 }

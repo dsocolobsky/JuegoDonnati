@@ -17,7 +17,6 @@ public class MemoCard extends Actor {
 
     public MemoCard(int index) {
         this.back = Assets.MEMOCARD_BACK;
-        this.front = front;
         this.setSize(128, 128);
         this.index = index;
         this.flipped = false;
