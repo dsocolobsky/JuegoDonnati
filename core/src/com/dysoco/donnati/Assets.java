@@ -1,6 +1,7 @@
 package com.dysoco.donnati;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
@@ -46,6 +47,9 @@ public class Assets {
 
     public static AtlasRegion MEMOCARD_BACK;
 
+    public static Sound SOUND_CHEST_OPEN;
+    public static Sound SOUND_CHEST_CLOSE;
+
     public static void load() {
         atlas = new TextureAtlas(Gdx.files.internal("textures/atlas.atlas"));
 
@@ -90,6 +94,9 @@ public class Assets {
         TRIANGLE_RED = new AtlasRegion(atlas.findRegion("triangle_red"));
 
         MEMOCARD_BACK = new AtlasRegion(atlas.findRegion("memocard_back"));
+
+        SOUND_CHEST_OPEN = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_open.ogg"));
+        SOUND_CHEST_OPEN = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_close.ogg"));
     }
 
 }
