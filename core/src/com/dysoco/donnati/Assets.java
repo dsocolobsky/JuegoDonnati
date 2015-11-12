@@ -66,10 +66,6 @@ public class Assets {
         GAME_THREE = new AtlasRegion(atlas.findRegion("game_three"));
         GAME_FOUR = new AtlasRegion(atlas.findRegion("game_four"));
 
-        //CHEST_BLUE = new AtlasRegion(atlas.findRegion("chest_blue"));
-        //CHEST_GREEN = new AtlasRegion(atlas.findRegion("chest_green"));
-        //CHEST_RED = new AtlasRegion(atlas.findRegion("chest_red"));
-
         CHEST_RED_CLOSED = new AtlasRegion(atlas.findRegion("chest_red_closed"));
         CHEST_RED_OPEN = new AtlasRegion(atlas.findRegion("chest_red_open"));
         SHADOW_LEFT_CLOSED = new AtlasRegion(atlas.findRegion("shadow_left_closed"));
@@ -96,7 +92,7 @@ public class Assets {
         MEMOCARD_BACK = new AtlasRegion(atlas.findRegion("memocard_back"));
 
         SOUND_CHEST_OPEN = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_open.ogg"));
-        SOUND_CHEST_OPEN = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_close.ogg"));
+        SOUND_CHEST_CLOSE = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_close.ogg"));
     }
 
 }
