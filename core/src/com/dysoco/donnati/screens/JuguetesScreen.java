@@ -3,6 +3,7 @@ package com.dysoco.donnati.screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
 import com.dysoco.donnati.*;
 
@@ -10,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class JuguetesScreen extends Screen {
+
+    Image background;
 
     public static enum ChestColor {
         BLUE, GREEN, RED
@@ -20,6 +23,10 @@ public class JuguetesScreen extends Screen {
 
     public JuguetesScreen(final Juego juego) {
         super(juego);
+
+        background = new Image(Assets.CHESTS_BACKGROUND);
+        background.setScale(0.5f);
+        stage.addActor(background);
 
         chests = new ArrayList<Chest>();
         chests.add(new Chest(ChestColor.BLUE));
@@ -56,6 +63,14 @@ public class JuguetesScreen extends Screen {
                 j.addListener(new DragListener() {
                     public void drag(InputEvent event, float x, float y, int pointer) {
                         event.getTarget().moveBy(x - event.getTarget().getWidth() / 2, y - event.getTarget().getHeight() / 2);
+
+                        for(Chest chest : chests) {
+                            if(overCorrectChest(juguete, chest) || overWrongChest(juguete, chest)) {
+                                chest.openChest();
+                            } else if(chest.isOpen()) {
+                                chest.closeChest();
+                            }
+                        }
                     }
 
                     public void dragStop(InputEvent event, float x, float y, int pointer) {
@@ -63,8 +78,10 @@ public class JuguetesScreen extends Screen {
                         for(Chest chest : chests) {
                             if(overCorrectChest(juguete, chest)) {
                                 event.getTarget().remove();
+                                chest.closeChest();
                             } else if(overWrongChest(juguete, chest)) {
                                 event.getTarget().setPosition(juguete.originalX, juguete.originalY);
+                                chest.closeChest();
                             }
                         }
 
