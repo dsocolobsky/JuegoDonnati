@@ -27,28 +27,27 @@ public class Juguete extends Actor {
         switch(order) {
             case 0:
                 tx = 40;
-                ty = 220;
+                ty = 124;
                 break;
             case 1:
-                tx = 240;
-                ty = 220;
-                setPosition(240, 220);
+                tx = 380;
+                ty = 124;
                 break;
             case 2:
-                tx = 440;
-                ty = 220;
+                tx = 640;
+                ty = 124;
                 break;
             case 3:
                 tx = 40;
-                ty = 80;
+                ty = 20;
                 break;
             case 4:
-                tx = 240;
-                ty = 80;
+                tx = 380;
+                ty = 20;
                 break;
             case 5:
-                tx = 440;
-                ty = 80;
+                tx = 640;
+                ty = 20;
                 break;
             default:
                 tx = 0;
