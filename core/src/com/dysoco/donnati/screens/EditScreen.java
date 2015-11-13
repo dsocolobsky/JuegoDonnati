@@ -30,17 +30,17 @@ public class EditScreen extends Screen {
         leftButton = new Button[5];
         rightButton = new Button[5];
 
-        leftButton[0] = new Button(leftRegion, 500, 20, 64, 64); // Pies
-        leftButton[1] = new Button(leftRegion, 500, 100, 64, 64); // Pantalon
-        leftButton[2] = new Button(leftRegion, 500, 196, 64, 64); // Torso
-        leftButton[3] = new Button(leftRegion, 500, 296, 64, 64); // Cara
-        leftButton[4] = new Button(leftRegion, 500, 372, 64, 64); // Pelo
+        leftButton[0] = new Button(leftRegion, 500, 20, 35, 64); // Pies
+        leftButton[1] = new Button(leftRegion, 500, 100, 35, 64); // Pantalon
+        leftButton[2] = new Button(leftRegion, 500, 196, 35, 64); // Torso
+        leftButton[3] = new Button(leftRegion, 500, 296, 35, 64); // Cara
+        leftButton[4] = new Button(leftRegion, 500, 372, 35, 64); // Pelo
 
-        rightButton[0] = new Button(rightRegion, 236, 20, 64, 64);
-        rightButton[1] = new Button(rightRegion, 236, 100, 64, 64);
-        rightButton[2] = new Button(rightRegion, 236, 196, 64, 64);
-        rightButton[3] = new Button(rightRegion, 236, 296, 64, 64);
-        rightButton[4] = new Button(rightRegion, 236, 372, 64, 64);
+        rightButton[0] = new Button(rightRegion, 236, 20, 35, 64);
+        rightButton[1] = new Button(rightRegion, 236, 100, 35, 64);
+        rightButton[2] = new Button(rightRegion, 236, 196, 35, 64);
+        rightButton[3] = new Button(rightRegion, 236, 296, 35, 64);
+        rightButton[4] = new Button(rightRegion, 236, 372, 35, 64);
 
         for(Button b : leftButton) {
             stage.addActor(b);
