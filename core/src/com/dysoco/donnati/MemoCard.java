@@ -23,16 +23,16 @@ public class MemoCard extends Actor {
 
         switch(index) {
             case 0:
-                this.front = Assets.SQUARE_BLUE;
+                this.front = Assets.DOLL;
                 break;
             case 1:
-                this.front = Assets.SQUARE_GREEN;
+                this.front = Assets.PELOTA;
                 break;
             case 2:
-                this.front = Assets.TRIANGLE_BLUE;
+                this.front = Assets.AVION;
                 break;
             case 3:
-                this.front = Assets.TRIANGLE_GREEN;
+                this.front = Assets.BARCO;
                 break;
         }
     }
@@ -86,7 +86,7 @@ public class MemoCard extends Actor {
             batch.draw(back, this.getX(), this.getY());
         } else {
             batch.draw(back, this.getX(), this.getY());
-            batch.draw(front, this.getX()+OFFSET, this.getY()+OFFSET);
+            batch.draw(front, this.getX()+OFFSET, this.getY()+OFFSET, front.getRegionWidth()/1.75f, front.getRegionHeight()/1.75f);
         }
     }
 

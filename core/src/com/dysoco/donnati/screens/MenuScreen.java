@@ -25,21 +25,18 @@ public class MenuScreen extends Screen {
         fondo = new Image(Assets.FONDO_TEXTURE);
         stage.addActor(fondo);
 
-        player = new Player(new TextureRegion(Assets.PLAYER_TEXTURE), 60, 20);
-        stage.addActor(player);
+        player = new Player(new TextureRegion(Assets.PLAYER_TEXTURE), 40, 5);
 
-        editButton = new Button(new TextureRegion(Assets.EDIT_BUTTON), 20, 400, 64, 64);
-
-        editButton.addListener(new InputListener() {
+        player.addListener(new InputListener() {
             public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
                 juego.setScreen(new EditScreen(juego));
                 return false;
             }
             public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
             }
-        });
+        });;
 
-        stage.addActor(editButton);
+        stage.addActor(player);
 
         gameOne = new Button(new TextureRegion(Assets.GAME_ONE), 300, 320, 200, 128);
 

@@ -17,6 +17,8 @@ public class Assets {
     public static AtlasRegion LEFT_BUTTON;
     public static AtlasRegion RIGHT_BUTTON;
 
+    public static AtlasRegion BACK_BUTTON;
+
     public static AtlasRegion GAME_ONE;
     public static AtlasRegion GAME_TWO;
     public static AtlasRegion GAME_THREE;
@@ -37,15 +39,18 @@ public class Assets {
     public static AtlasRegion SHADOW_RIGHT_CLOSED;
     public static AtlasRegion SHADOW_RIGHT_OPEN;
 
-    public static AtlasRegion SQUARE_BLUE;
-    public static AtlasRegion SQUARE_GREEN;
-    public static AtlasRegion SQUARE_RED;
-
-    public static AtlasRegion TRIANGLE_RED;
-    public static AtlasRegion TRIANGLE_GREEN;
-    public static AtlasRegion TRIANGLE_BLUE;
+    public static AtlasRegion OSO;
+    public static AtlasRegion AUTO;
+    public static AtlasRegion DOLL;
+    public static AtlasRegion PELOTA;
+    public static AtlasRegion AVION;
+    public static AtlasRegion BARCO;
 
     public static AtlasRegion MEMOCARD_BACK;
+
+    public static Sound SOUND_CORRECT;
+    public static Sound SOUND_WRONG;
+    public static Sound SOUND_APPLAUSE;
 
     public static Sound SOUND_CHEST_OPEN;
     public static Sound SOUND_CHEST_CLOSE;
@@ -56,10 +61,12 @@ public class Assets {
         FONDO_TEXTURE = new Texture(Gdx.files.internal("textures/background.png"));
         CHESTS_BACKGROUND = new Texture(Gdx.files.internal("textures/chests_background.png"));
 
-        PLAYER_TEXTURE = new AtlasRegion(atlas.findRegion("character"));
+        PLAYER_TEXTURE = new AtlasRegion(atlas.findRegion("chico"));
         EDIT_BUTTON = new AtlasRegion(atlas.findRegion("button_config"));
         LEFT_BUTTON = new AtlasRegion(atlas.findRegion("button_right"));
         RIGHT_BUTTON = new AtlasRegion(atlas.findRegion("button_left"));
+
+        BACK_BUTTON = new AtlasRegion(atlas.findRegion("button_back"));
 
         GAME_ONE = new AtlasRegion(atlas.findRegion("game_one"));
         GAME_TWO = new AtlasRegion(atlas.findRegion("game_two"));
@@ -81,15 +88,18 @@ public class Assets {
         SHADOW_RIGHT_CLOSED = new AtlasRegion(atlas.findRegion("shadow_right_closed"));
         SHADOW_RIGHT_OPEN = new AtlasRegion(atlas.findRegion("shadow_right_open"));
 
-        SQUARE_BLUE = new AtlasRegion(atlas.findRegion("square_blue"));
-        SQUARE_GREEN = new AtlasRegion(atlas.findRegion("square_green"));
-        SQUARE_RED = new AtlasRegion(atlas.findRegion("square_red"));
-
-        TRIANGLE_BLUE = new AtlasRegion(atlas.findRegion("triangle_blue"));
-        TRIANGLE_GREEN = new AtlasRegion(atlas.findRegion("triangle_green"));
-        TRIANGLE_RED = new AtlasRegion(atlas.findRegion("triangle_red"));
+        OSO = new AtlasRegion(atlas.findRegion("oso"));
+        AUTO = new AtlasRegion(atlas.findRegion("auto"));
+        DOLL = new AtlasRegion(atlas.findRegion("doll"));
+        PELOTA = new AtlasRegion(atlas.findRegion("pelota"));
+        AVION = new AtlasRegion(atlas.findRegion("avion"));
+        BARCO = new AtlasRegion(atlas.findRegion("barco"));
 
         MEMOCARD_BACK = new AtlasRegion(atlas.findRegion("memocard_back"));
+
+        SOUND_CORRECT = Gdx.audio.newSound(Gdx.files.internal("sounds/correct.ogg"));
+        SOUND_WRONG = Gdx.audio.newSound(Gdx.files.internal("sounds/wrong.ogg"));
+        SOUND_APPLAUSE = Gdx.audio.newSound(Gdx.files.internal("sounds/applause.ogg"));
 
         SOUND_CHEST_OPEN = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_open.ogg"));
         SOUND_CHEST_CLOSE = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_close.ogg"));

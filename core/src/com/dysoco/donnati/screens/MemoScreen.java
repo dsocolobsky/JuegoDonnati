@@ -2,6 +2,7 @@ package com.dysoco.donnati.screens;
 
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
+import com.dysoco.donnati.Assets;
 import com.dysoco.donnati.Juego;
 import com.dysoco.donnati.MemoCard;
 import com.dysoco.donnati.Screen;
@@ -53,6 +54,9 @@ public class MemoScreen extends Screen {
                                 if(card.getIndex() != previousCard.getIndex()) {
                                     card.flip();
                                     previousCard.flip();
+                                    Assets.SOUND_WRONG.play();
+                                } else {
+                                    Assets.SOUND_CORRECT.play();
                                 }
 
                                 previousCard = null;

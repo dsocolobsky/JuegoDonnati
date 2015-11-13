@@ -1,5 +1,6 @@
 package com.dysoco.donnati;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
@@ -17,7 +18,7 @@ public class Juguete extends Actor {
     public Juguete(TextureRegion texture, JuguetesScreen.ChestColor chestColor) {
         this.texture = texture;
         this.chestColor = chestColor;
-        this.setSize(64, 64);
+        this.setSize(120, 120);
     }
 
     public void setOrder(int order) {
@@ -62,7 +63,7 @@ public class Juguete extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        batch.draw(texture, this.getX(), this.getY());
+        batch.draw(texture, this.getX(), this.getY(), texture.getRegionWidth()/1.25f, texture.getRegionHeight()/1.25f);
     }
 
     public Rectangle getBounds() {

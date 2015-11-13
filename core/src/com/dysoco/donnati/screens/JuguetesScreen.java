@@ -1,8 +1,8 @@
 package com.dysoco.donnati.screens;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
 import com.dysoco.donnati.*;
@@ -13,6 +13,7 @@ import java.util.Collections;
 public class JuguetesScreen extends Screen {
 
     Image background;
+    Button volver;
 
     public static enum ChestColor {
         BLUE, GREEN, RED
@@ -21,12 +22,28 @@ public class JuguetesScreen extends Screen {
     ArrayList<Chest> chests;
     ArrayList<Juguete> juguetes;
 
+    private int juguetesMetidos;
+
     public JuguetesScreen(final Juego juego) {
         super(juego);
+
+        juguetesMetidos = 0;
 
         background = new Image(Assets.CHESTS_BACKGROUND);
         background.setScale(0.5f);
         stage.addActor(background);
+
+        volver = new Button(new TextureRegion(Assets.BACK_BUTTON), 10, 420, 56, 56);
+
+        volver.addListener(new InputListener() {
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                juego.setScreen(new MenuScreen(juego));
+                return false;
+            }
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+            }
+        });
+        stage.addActor(volver);
 
         chests = new ArrayList<Chest>();
         chests.add(new Chest(ChestColor.BLUE));
@@ -44,12 +61,12 @@ public class JuguetesScreen extends Screen {
         }
 
         juguetes = new ArrayList<Juguete>();
-        juguetes.add(new Juguete(Assets.SQUARE_BLUE, ChestColor.BLUE));
-        juguetes.add(new Juguete(Assets.SQUARE_GREEN, ChestColor.GREEN));
-        juguetes.add(new Juguete(Assets.SQUARE_RED, ChestColor.RED));
-        juguetes.add(new Juguete(Assets.TRIANGLE_BLUE, ChestColor.BLUE));
-        juguetes.add(new Juguete(Assets.TRIANGLE_GREEN, ChestColor.GREEN));
-        juguetes.add(new Juguete(Assets.TRIANGLE_RED, ChestColor.RED));
+        juguetes.add(new Juguete(Assets.OSO, ChestColor.BLUE));
+        juguetes.add(new Juguete(Assets.AUTO, ChestColor.BLUE));
+        juguetes.add(new Juguete(Assets.DOLL, ChestColor.RED));
+        juguetes.add(new Juguete(Assets.PELOTA, ChestColor.RED));
+        juguetes.add(new Juguete(Assets.AVION, ChestColor.GREEN));
+        juguetes.add(new Juguete(Assets.BARCO, ChestColor.GREEN));
 
         Collections.shuffle(juguetes);
 
@@ -78,9 +95,16 @@ public class JuguetesScreen extends Screen {
                         for(Chest chest : chests) {
                             if(overCorrectChest(juguete, chest)) {
                                 event.getTarget().remove();
+                                Assets.SOUND_CORRECT.play(1.80f);
                                 chest.closeChest();
+                                juguetesMetidos++;
+
+                                if(juguetesMetidos >= 6) {
+                                    Assets.SOUND_APPLAUSE.play();
+                                }
                             } else if(overWrongChest(juguete, chest)) {
                                 event.getTarget().setPosition(juguete.originalX, juguete.originalY);
+                                Assets.SOUND_WRONG.play(1.5f);
                                 chest.closeChest();
                             }
                         }

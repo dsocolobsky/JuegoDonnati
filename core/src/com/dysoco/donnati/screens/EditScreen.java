@@ -1,23 +1,10 @@
 package com.dysoco.donnati.screens;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.ScreenAdapter;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
-import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.dysoco.donnati.Assets;
-import com.dysoco.donnati.Button;
-import com.dysoco.donnati.Juego;
-import com.dysoco.donnati.Player;
+import com.dysoco.donnati.*;
 
-public class EditScreen extends ScreenAdapter {
-
-    final Juego juego;
-    Stage stage;
+public class EditScreen extends Screen {
 
     Player player;
     Image fondo;
@@ -28,27 +15,13 @@ public class EditScreen extends ScreenAdapter {
     Button[] rightButton;
 
     public EditScreen(final Juego juego) {
-        this.juego = juego;
-        stage = new Stage(new FitViewport(juego.WINDOW_WIDTH, juego.WINDOW_HEIGHT), juego.batch);
+        super(juego);
 
         fondo = new Image(Assets.FONDO_TEXTURE);
         stage.addActor(fondo);
 
-        player = new Player(new TextureRegion(Assets.PLAYER_TEXTURE), 328, 20);
+        player = new Player(new TextureRegion(Assets.PLAYER_TEXTURE), 328, 5);
         stage.addActor(player);
-
-        editButton = new Button(new TextureRegion(Assets.EDIT_BUTTON), 20, 400, 64, 64);
-
-        editButton.addListener(new InputListener() {
-            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
-                juego.setScreen(new MenuScreen(juego));
-                return false;
-            }
-            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
-
-        stage.addActor(editButton);
 
         // BOTONES
         TextureRegion leftRegion = new TextureRegion(Assets.LEFT_BUTTON);
