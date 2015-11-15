@@ -11,7 +11,7 @@ public class EditScreen extends Screen {
 
     VolverButton volver;
 
-    Button[] leftButton;
+    RopaButton[] leftButton;
     Button[] rightButton;
 
     public EditScreen(final Juego juego) {
@@ -26,100 +26,18 @@ public class EditScreen extends Screen {
         volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
-        // BOTONES
-        TextureRegion leftRegion = new TextureRegion(Assets.LEFT_BUTTON);
-        TextureRegion rightRegion = new TextureRegion(Assets.RIGHT_BUTTON);
-
-        leftButton = new Button[4];
+        leftButton = new RopaButton[4];
         rightButton = new Button[4];
 
-        leftButton[0] = new Button(leftRegion, 500, 20, 35, 64);
-        leftButton[0].addListener(new InputListener() {
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.zapatos.backwards();
-                return false;
-            }
+        leftButton[0] = new RopaButton(false, player.zapatos, 20);
+        leftButton[1] = new RopaButton(false, player.piernas, 130);
+        leftButton[2] = new RopaButton(false, player.torso, 256);
+        leftButton[3] = new RopaButton(false, player.pelos, 372);
 
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
-
-        leftButton[1] = new Button(leftRegion, 500, 130, 35, 64);
-        leftButton[1].addListener(new InputListener() {
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.piernas.backwards();
-                return false;
-            }
-
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
-
-        leftButton[2] = new Button(leftRegion, 500, 256, 35, 64);
-        leftButton[2].addListener(new InputListener() {
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.torso.backwards();
-                return false;
-            }
-
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
-
-        leftButton[3] = new Button(leftRegion, 500, 372, 35, 64); // Pelo
-        leftButton[3].addListener(new InputListener() {
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.pelos.backwards();
-                return false;
-            }
-
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
-
-        rightButton[0] = new Button(rightRegion, 236, 20, 35, 64);
-        rightButton[0].addListener(new InputListener() {
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.zapatos.forward();
-                return false;
-            }
-
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
-
-        rightButton[1] = new Button(rightRegion, 236, 130, 35, 64);
-        rightButton[1].addListener(new InputListener() {
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.torso.forward();
-                return false;
-            }
-
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
-
-        rightButton[2] = new Button(rightRegion, 236, 256, 35, 64);
-        rightButton[2].addListener(new InputListener() {
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.torso.forward();
-                return false;
-            }
-
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
-
-        rightButton[3] = new Button(rightRegion, 236, 372, 35, 64);
-        rightButton[3].addListener(new InputListener() {
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.pelos.forward();
-                return false;
-            }
-
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
+        rightButton[0] = new RopaButton(true, player.zapatos, 20);
+        rightButton[1] = new RopaButton(true, player.piernas, 130);
+        rightButton[2] = new RopaButton(true, player.torso, 256);
+        rightButton[3] = new RopaButton(true, player.pelos, 372);
 
         for(Button b : leftButton) {
             stage.addActor(b);
