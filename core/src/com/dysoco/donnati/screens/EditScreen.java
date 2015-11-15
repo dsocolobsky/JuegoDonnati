@@ -9,7 +9,7 @@ import com.dysoco.donnati.*;
 public class EditScreen extends Screen {
     Image fondo;
 
-    Button volver;
+    ButtonVolver volver;
 
     Button[] leftButton;
     Button[] rightButton;
@@ -23,16 +23,7 @@ public class EditScreen extends Screen {
         player.setPosition(328, 5);
         stage.addActor(player);
 
-        volver = new Button(new TextureRegion(Assets.BACK_BUTTON), 10, 420, 56, 56);
-
-        volver.addListener(new InputListener() {
-            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
-                juego.setScreen(new MenuScreen(juego));
-                return false;
-            }
-            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
+        volver = new ButtonVolver(juego, 10, 420, 56, 56);
         stage.addActor(volver);
 
         // BOTONES

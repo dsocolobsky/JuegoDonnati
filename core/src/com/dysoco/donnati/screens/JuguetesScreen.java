@@ -13,7 +13,7 @@ import java.util.Collections;
 public class JuguetesScreen extends Screen {
 
     Image background;
-    Button volver;
+    ButtonVolver volver;
 
     public static enum ChestColor {
         BLUE, GREEN, RED
@@ -33,16 +33,7 @@ public class JuguetesScreen extends Screen {
         background.setScale(0.5f);
         stage.addActor(background);
 
-        volver = new Button(new TextureRegion(Assets.BACK_BUTTON), 10, 420, 56, 56);
-
-        volver.addListener(new InputListener() {
-            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
-                juego.setScreen(new MenuScreen(juego));
-                return false;
-            }
-            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
-            }
-        });
+        volver = new ButtonVolver(juego, 10, 420, 56, 56);
         stage.addActor(volver);
 
         chests = new ArrayList<Chest>();
