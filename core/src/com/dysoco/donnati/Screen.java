@@ -10,10 +10,12 @@ public class Screen extends ScreenAdapter {
 
     protected final Juego juego;
     protected Stage stage;
+    protected Player player;
 
     public Screen(final Juego juego) {
         this.juego = juego;
         this.stage = new Stage(new FitViewport(juego.WINDOW_WIDTH, juego.WINDOW_HEIGHT), juego.batch);
+        this.player = juego.player;
     }
 
     @Override

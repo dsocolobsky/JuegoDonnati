@@ -9,8 +9,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.dysoco.donnati.*;
 
 public class MenuScreen extends Screen {
-
-    Player player;
     Button editButton;
     Image fondo;
 
@@ -25,7 +23,7 @@ public class MenuScreen extends Screen {
         fondo = new Image(Assets.FONDO_TEXTURE);
         stage.addActor(fondo);
 
-        player = new Player(new TextureRegion(Assets.PLAYER_TEXTURE), 40, 5);
+        player.setPosition(40, 5);
 
         player.addListener(new InputListener() {
             public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
@@ -68,6 +66,16 @@ public class MenuScreen extends Screen {
         stage.addActor(gameThree);
 
         gameFour = new Button(new TextureRegion(Assets.GAME_FOUR), 560, 140, 200, 128);
+
+        gameFour.addListener(new InputListener() {
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                juego.setScreen(new TrajesScreen(juego));
+                return false;
+            }
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+            }
+        });
+
         stage.addActor(gameFour);
     }
 

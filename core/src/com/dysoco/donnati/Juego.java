@@ -3,6 +3,7 @@ package com.dysoco.donnati;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.dysoco.donnati.screens.MenuScreen;
 
 public class Juego extends Game {
@@ -11,6 +12,7 @@ public class Juego extends Game {
 
 	public AssetManager assetManager;
 	public SpriteBatch batch;
+	public Player player;
 	
 	@Override
 	public void create () {
@@ -18,6 +20,8 @@ public class Juego extends Game {
 		batch = new SpriteBatch();
 
         Assets.load();
+
+        player = new Player(new TextureRegion(Assets.PLAYER_TEXTURE));
 
         setScreen(new MenuScreen(this));
 	}
