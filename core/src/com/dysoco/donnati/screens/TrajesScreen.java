@@ -2,7 +2,10 @@ package com.dysoco.donnati.screens;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.dysoco.donnati.*;
+import com.dysoco.donnati.Assets;
+import com.dysoco.donnati.Juego;
+import com.dysoco.donnati.Screen;
+import com.dysoco.donnati.VolverButton;
 
 import java.util.ArrayList;
 import java.util.Collections;
