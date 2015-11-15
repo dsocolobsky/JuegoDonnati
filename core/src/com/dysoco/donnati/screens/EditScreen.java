@@ -36,7 +36,7 @@ public class EditScreen extends Screen {
         leftButton[0] = new Button(leftRegion, 500, 20, 35, 64);
         leftButton[0].addListener(new InputListener() {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.moverZapatos(-1);
+                player.zapatos.backwards();
                 return false;
             }
 
@@ -47,7 +47,7 @@ public class EditScreen extends Screen {
         leftButton[1] = new Button(leftRegion, 500, 130, 35, 64);
         leftButton[1].addListener(new InputListener() {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.moverPiernas(-1);
+                player.piernas.backwards();
                 return false;
             }
 
@@ -58,7 +58,7 @@ public class EditScreen extends Screen {
         leftButton[2] = new Button(leftRegion, 500, 256, 35, 64);
         leftButton[2].addListener(new InputListener() {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.moverTorso(-1);
+                player.torso.backwards();
                 return false;
             }
 
@@ -69,7 +69,7 @@ public class EditScreen extends Screen {
         leftButton[3] = new Button(leftRegion, 500, 372, 35, 64); // Pelo
         leftButton[3].addListener(new InputListener() {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.moverPelos(-1);
+                player.pelos.backwards();
                 return false;
             }
 
@@ -80,7 +80,7 @@ public class EditScreen extends Screen {
         rightButton[0] = new Button(rightRegion, 236, 20, 35, 64);
         rightButton[0].addListener(new InputListener() {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.moverZapatos(1);
+                player.zapatos.forward();
                 return false;
             }
 
@@ -91,7 +91,7 @@ public class EditScreen extends Screen {
         rightButton[1] = new Button(rightRegion, 236, 130, 35, 64);
         rightButton[1].addListener(new InputListener() {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.moverPiernas(1);
+                player.torso.forward();
                 return false;
             }
 
@@ -102,7 +102,7 @@ public class EditScreen extends Screen {
         rightButton[2] = new Button(rightRegion, 236, 256, 35, 64);
         rightButton[2].addListener(new InputListener() {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.moverTorso(1);
+                player.torso.forward();
                 return false;
             }
 
@@ -113,7 +113,7 @@ public class EditScreen extends Screen {
         rightButton[3] = new Button(rightRegion, 236, 372, 35, 64);
         rightButton[3].addListener(new InputListener() {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                player.moverPelos(1);
+                player.pelos.forward();
                 return false;
             }
 
