@@ -11,7 +11,16 @@ public class Assets {
     public static Texture FONDO_TEXTURE;
     public static Texture CHESTS_BACKGROUND;
 
+    public static Texture FONDO_COCINA;
+    public static Texture FONDO_POLICIA;
+    public static Texture FONDO_BOMBERO;
+    public static Texture FONDO_AGUA;
+    public static Texture FONDO_FRIO;
+
     private static TextureAtlas atlas;
+
+    public static AtlasRegion VACIO;
+
     public static AtlasRegion PLAYER_TEXTURE;
     public static AtlasRegion EDIT_BUTTON;
     public static AtlasRegion LEFT_BUTTON;
@@ -48,6 +57,16 @@ public class Assets {
 
     public static AtlasRegion MEMOCARD_BACK;
 
+    public static AtlasRegion PELO;
+    public static AtlasRegion BUZO;
+    public static AtlasRegion PANTALONES;
+    public static AtlasRegion ZAPATOS;
+
+    public static AtlasRegion COCINERO_GORRO;
+    public static AtlasRegion COCINERO_TRAJE;
+    public static AtlasRegion COCINERO_PANTALONES;
+    public static AtlasRegion COCINERO_ZAPATOS;
+
     public static Sound SOUND_CORRECT;
     public static Sound SOUND_WRONG;
     public static Sound SOUND_APPLAUSE;
@@ -58,10 +77,18 @@ public class Assets {
     public static void load() {
         atlas = new TextureAtlas(Gdx.files.internal("textures/atlas.atlas"));
 
+        VACIO = new AtlasRegion(atlas.findRegion("vacio"));
+
         FONDO_TEXTURE = new Texture(Gdx.files.internal("textures/background.png"));
         CHESTS_BACKGROUND = new Texture(Gdx.files.internal("textures/chests_background.png"));
 
-        PLAYER_TEXTURE = new AtlasRegion(atlas.findRegion("chico"));
+        FONDO_COCINA = new Texture(Gdx.files.internal("textures/fondo_cocina.jpg"));
+        FONDO_POLICIA = new Texture(Gdx.files.internal("textures/fondo_policia.jpg"));
+        FONDO_BOMBERO = new Texture(Gdx.files.internal("textures/fondo_bombero.jpg"));
+        FONDO_AGUA = new Texture(Gdx.files.internal("textures/fondo_agua.jpg"));
+        FONDO_FRIO = new Texture(Gdx.files.internal("textures/fondo_frio.jpg"));
+
+        PLAYER_TEXTURE = new AtlasRegion(atlas.findRegion("hombre"));
         EDIT_BUTTON = new AtlasRegion(atlas.findRegion("button_config"));
         LEFT_BUTTON = new AtlasRegion(atlas.findRegion("button_right"));
         RIGHT_BUTTON = new AtlasRegion(atlas.findRegion("button_left"));
@@ -96,6 +123,16 @@ public class Assets {
         BARCO = new AtlasRegion(atlas.findRegion("barco"));
 
         MEMOCARD_BACK = new AtlasRegion(atlas.findRegion("memocard_back"));
+
+        PELO = new AtlasRegion(atlas.findRegion("pelo"));
+        BUZO = new AtlasRegion(atlas.findRegion("buzo"));
+        PANTALONES = new AtlasRegion(atlas.findRegion("pantalones"));
+        ZAPATOS = new AtlasRegion(atlas.findRegion("zapatos"));
+
+        COCINERO_GORRO = new AtlasRegion(atlas.findRegion("cocinero_gorro"));
+        COCINERO_TRAJE = new AtlasRegion(atlas.findRegion("cocinero_traje"));
+        COCINERO_PANTALONES = new AtlasRegion(atlas.findRegion("cocinero_pantalones"));
+        COCINERO_ZAPATOS = new AtlasRegion(atlas.findRegion("cocinero_zapatos"));
 
         SOUND_CORRECT = Gdx.audio.newSound(Gdx.files.internal("sounds/correct.ogg"));
         SOUND_WRONG = Gdx.audio.newSound(Gdx.files.internal("sounds/wrong.ogg"));
