@@ -1,8 +1,6 @@
 package com.dysoco.donnati.screens;
 
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
 import com.dysoco.donnati.*;
@@ -13,7 +11,7 @@ import java.util.Collections;
 public class JuguetesScreen extends Screen {
 
     Image background;
-    ButtonVolver volver;
+    VolverButton volver;
 
     public static enum ChestColor {
         BLUE, GREEN, RED
@@ -33,7 +31,7 @@ public class JuguetesScreen extends Screen {
         background.setScale(0.5f);
         stage.addActor(background);
 
-        volver = new ButtonVolver(juego, 10, 420, 56, 56);
+        volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
         chests = new ArrayList<Chest>();

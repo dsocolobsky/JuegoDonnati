@@ -1,8 +1,6 @@
 package com.dysoco.donnati.screens;
 
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
 import com.dysoco.donnati.*;
 
@@ -15,14 +13,14 @@ public class MemoScreen extends Screen {
     boolean secondFlip;
     MemoCard previousCard;
 
-    ButtonVolver volver;
+    VolverButton volver;
 
     int pares;
 
     public MemoScreen(final Juego juego) {
         super(juego);
 
-        volver = new ButtonVolver(juego, 10, 420, 56, 56);
+        volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
         secondFlip = false;

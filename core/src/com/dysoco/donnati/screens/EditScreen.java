@@ -9,7 +9,7 @@ import com.dysoco.donnati.*;
 public class EditScreen extends Screen {
     Image fondo;
 
-    ButtonVolver volver;
+    VolverButton volver;
 
     Button[] leftButton;
     Button[] rightButton;
@@ -23,7 +23,7 @@ public class EditScreen extends Screen {
         player.setPosition(328, 5);
         stage.addActor(player);
 
-        volver = new ButtonVolver(juego, 10, 420, 56, 56);
+        volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
         // BOTONES
