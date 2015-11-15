@@ -89,8 +89,4 @@ public class MemoCard extends Actor {
             batch.draw(front, this.getX()+OFFSET, this.getY()+OFFSET, front.getRegionWidth()/1.75f, front.getRegionHeight()/1.75f);
         }
     }
-
-    public Rectangle getBounds() {
-        return new Rectangle((int)getX(), (int)getY(), (int)getWidth(), (int)getHeight());
-    }
 }
