@@ -49,7 +49,7 @@ public class Player extends Actor {
             batch.draw(pelos.currentAtlas(), getX() + 27, getY() + 382);
         }
 
-        if(piernas.currentKey() == "traje") {
+        if(piernas.currentKey() == "cocinero") {
             batch.draw(piernas.currentAtlas(), getX()+20, getY()+32);
         } else {
             batch.draw(piernas.currentAtlas(), getX() + 11, getY() + 30);
