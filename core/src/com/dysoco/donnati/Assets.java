@@ -84,6 +84,7 @@ public class Assets {
     public static AtlasRegion TRAJE_POLICIA;
     public static AtlasRegion TRAJE_COCINERO;
     public static AtlasRegion TRAJE_FRIO;
+    public static AtlasRegion TRAJE_BUZO;
 
     public static Sound SOUND_CORRECT;
     public static Sound SOUND_WRONG;
@@ -170,6 +171,7 @@ public class Assets {
         TRAJE_POLICIA = new AtlasRegion(atlas.findRegion("traje_policia"));
         TRAJE_COCINERO = new AtlasRegion(atlas.findRegion("traje_cocinero"));
         TRAJE_FRIO = new AtlasRegion(atlas.findRegion("traje_frio"));
+        TRAJE_BUZO = new AtlasRegion(atlas.findRegion("traje_buzo"));
 
         SOUND_CORRECT = Gdx.audio.newSound(Gdx.files.internal("sounds/correct.ogg"));
         SOUND_WRONG = Gdx.audio.newSound(Gdx.files.internal("sounds/wrong.ogg"));

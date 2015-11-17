@@ -4,156 +4,156 @@ size: 1024,1024
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
+barco
+  rotate: false
+  xy: 858, 57
+  size: 120, 185
+  orig: 120, 185
+  offset: 0, 0
+  index: -1
 button_back
   rotate: false
-  xy: 417, 10
+  xy: 909, 478
   size: 50, 50
   orig: 50, 50
   offset: 0, 0
   index: -1
+button_config
+  rotate: false
+  xy: 425, 83
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
 button_left
   rotate: false
-  xy: 961, 72
+  xy: 425, 17
   size: 35, 64
   orig: 35, 64
   offset: 0, 0
   index: -1
 button_right
   rotate: false
-  xy: 961, 6
+  xy: 462, 17
   size: 35, 64
   orig: 35, 64
   offset: 0, 0
   index: -1
 buzo
   rotate: false
-  xy: 911, 729
+  xy: 113, 2
   size: 108, 145
   orig: 108, 145
   offset: 0, 0
   index: -1
+chest_blue_closed
+  rotate: false
+  xy: 507, 7
+  size: 349, 235
+  orig: 349, 235
+  offset: 0, 0
+  index: -1
 chest_blue_open
   rotate: false
-  xy: 557, 428
+  xy: 557, 429
   size: 350, 294
   orig: 350, 294
   offset: 0, 0
   index: -1
 chest_green_open
   rotate: false
-  xy: 557, 724
+  xy: 557, 725
   size: 352, 297
   orig: 352, 297
   offset: 0, 0
   index: -1
-chest_red
-  rotate: false
-  xy: 909, 333
-  size: 90, 105
-  orig: 90, 105
-  offset: 0, 0
-  index: -1
-chest_red_open
-  rotate: false
-  xy: 557, 132
-  size: 350, 294
-  orig: 350, 294
-  offset: 0, 0
-  index: -1
-chico
-  rotate: false
-  xy: 417, 62
-  size: 138, 457
-  orig: 138, 457
-  offset: 0, 0
-  index: -1
 cocinero_pantalones
   rotate: false
-  xy: 909, 138
+  xy: 909, 530
   size: 86, 193
   orig: 86, 193
   offset: 0, 0
   index: -1
 cocinero_traje
   rotate: false
-  xy: 911, 876
+  xy: 2, 2
   size: 109, 145
   orig: 109, 145
   offset: 0, 0
   index: -1
-game_four
+cocinero_zapatos
   rotate: false
-  xy: 557, 2
-  size: 200, 128
-  orig: 200, 128
+  xy: 858, 19
+  size: 126, 36
+  orig: 126, 36
   offset: 0, 0
   index: -1
-game_three
+game_four
   rotate: false
-  xy: 759, 2
+  xy: 223, 19
   size: 200, 128
   orig: 200, 128
   offset: 0, 0
   index: -1
 pantalones
   rotate: false
-  xy: 909, 440
+  xy: 911, 829
   size: 96, 193
   orig: 96, 193
   offset: 0, 0
   index: -1
 pelo
   rotate: false
-  xy: 911, 635
+  xy: 911, 735
   size: 102, 92
   orig: 102, 92
   offset: 0, 0
   index: -1
+shadow_left_closed
+  rotate: false
+  xy: 521, 244
+  size: 484, 183
+  orig: 484, 183
+  offset: 0, 0
+  index: -1
 shadow_left_open
   rotate: false
-  xy: 2, 521
+  xy: 2, 522
   size: 551, 165
   orig: 551, 165
   offset: 0, 0
   index: -1
+shadow_middle_closed
+  rotate: false
+  xy: 2, 333
+  size: 517, 187
+  orig: 517, 187
+  offset: 0, 0
+  index: -1
 shadow_middle_open
   rotate: false
-  xy: 2, 854
+  xy: 2, 855
   size: 553, 167
   orig: 553, 167
   offset: 0, 0
   index: -1
+shadow_right_closed
+  rotate: false
+  xy: 2, 149
+  size: 503, 182
+  orig: 503, 182
+  offset: 0, 0
+  index: -1
 shadow_right_open
   rotate: false
-  xy: 2, 688
+  xy: 2, 689
   size: 553, 164
   orig: 553, 164
   offset: 0, 0
   index: -1
-traje_bombero
-  rotate: false
-  xy: 283, 36
-  size: 132, 483
-  orig: 132, 483
-  offset: 0, 0
-  index: -1
-traje_cocinero
-  rotate: false
-  xy: 148, 29
-  size: 133, 490
-  orig: 133, 490
-  offset: 0, 0
-  index: -1
-traje_frio
-  rotate: false
-  xy: 2, 17
-  size: 144, 502
-  orig: 144, 502
-  offset: 0, 0
-  index: -1
 vacio
   rotate: false
-  xy: 283, 2
+  xy: 521, 488
   size: 32, 32
   orig: 32, 32
   offset: 0, 0
@@ -164,212 +164,219 @@ size: 1024,1024
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-auto
-  rotate: false
-  xy: 526, 19
-  size: 120, 109
-  orig: 120, 109
-  offset: 0, 0
-  index: -1
-button_config
-  rotate: false
-  xy: 648, 64
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: -1
-character
-  rotate: false
-  xy: 614, 224
-  size: 148, 369
-  orig: 148, 369
-  offset: 0, 0
-  index: -1
-chest_blue_closed
-  rotate: false
-  xy: 136, 407
-  size: 349, 235
-  orig: 349, 235
-  offset: 0, 0
-  index: -1
 chest_green_closed
   rotate: false
-  xy: 136, 170
+  xy: 543, 490
   size: 349, 235
   orig: 349, 235
+  offset: 0, 0
+  index: -1
+chest_red
+  rotate: false
+  xy: 439, 457
+  size: 90, 105
+  orig: 90, 105
   offset: 0, 0
   index: -1
 chest_red_closed
   rotate: false
-  xy: 614, 595
+  xy: 531, 253
   size: 349, 235
   orig: 349, 235
   offset: 0, 0
   index: -1
+chest_red_open
+  rotate: false
+  xy: 543, 727
+  size: 350, 294
+  orig: 350, 294
+  offset: 0, 0
+  index: -1
+chico
+  rotate: false
+  xy: 299, 79
+  size: 138, 457
+  orig: 138, 457
+  offset: 0, 0
+  index: -1
 cocinero_gorro
   rotate: false
-  xy: 614, 130
+  xy: 882, 321
   size: 132, 92
   orig: 132, 92
   offset: 0, 0
   index: -1
-cocinero_zapatos
+doll
   rotate: false
-  xy: 132, 2
-  size: 126, 36
-  orig: 126, 36
+  xy: 895, 842
+  size: 120, 179
+  orig: 120, 179
   offset: 0, 0
   index: -1
 game_one
   rotate: false
-  xy: 764, 470
+  xy: 763, 3
   size: 200, 123
   orig: 200, 123
   offset: 0, 0
   index: -1
+game_three
+  rotate: false
+  xy: 439, 61
+  size: 200, 128
+  orig: 200, 128
+  offset: 0, 0
+  index: -1
 game_two
   rotate: false
-  xy: 764, 345
+  xy: 641, 128
   size: 205, 123
   orig: 205, 123
   offset: 0, 0
   index: -1
 hombre
   rotate: false
-  xy: 487, 185
+  xy: 416, 564
   size: 125, 457
   orig: 125, 457
   offset: 0, 0
   index: -1
 memocard_back
   rotate: false
-  xy: 2, 29
+  xy: 894, 545
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 memocard_five
   rotate: false
-  xy: 764, 215
+  xy: 894, 415
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 memocard_four
   rotate: false
-  xy: 894, 215
+  xy: 882, 191
   size: 128, 128
   orig: 128, 128
-  offset: 0, 0
-  index: -1
-memocard_front
-  rotate: false
-  xy: 748, 85
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-memocard_one
-  rotate: false
-  xy: 878, 85
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-memocard_six
-  rotate: false
-  xy: 136, 40
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-memocard_three
-  rotate: false
-  xy: 266, 40
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-memocard_two
-  rotate: false
-  xy: 396, 40
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-shadow_left_closed
-  rotate: false
-  xy: 521, 832
-  size: 484, 183
-  orig: 484, 183
-  offset: 0, 0
-  index: -1
-shadow_middle_closed
-  rotate: false
-  xy: 2, 828
-  size: 517, 187
-  orig: 517, 187
-  offset: 0, 0
-  index: -1
-shadow_right_closed
-  rotate: false
-  xy: 2, 644
-  size: 503, 182
-  orig: 503, 182
-  offset: 0, 0
-  index: -1
-traje_policia
-  rotate: false
-  xy: 2, 159
-  size: 132, 483
-  orig: 132, 483
-  offset: 0, 0
-  index: -1
-zapatos
-  rotate: false
-  xy: 260, 2
-  size: 116, 36
-  orig: 116, 36
-  offset: 0, 0
-  index: -1
-
-atlas3.png
-size: 512,256
-format: RGBA8888
-filter: Nearest,Nearest
-repeat: none
-avion
-  rotate: false
-  xy: 368, 2
-  size: 120, 100
-  orig: 120, 100
-  offset: 0, 0
-  index: -1
-barco
-  rotate: false
-  xy: 2, 43
-  size: 120, 185
-  orig: 120, 185
-  offset: 0, 0
-  index: -1
-doll
-  rotate: false
-  xy: 124, 49
-  size: 120, 179
-  orig: 120, 179
   offset: 0, 0
   index: -1
 oso
   rotate: false
-  xy: 246, 63
+  xy: 895, 675
   size: 120, 165
   orig: 120, 165
   offset: 0, 0
   index: -1
 pelota
   rotate: false
-  xy: 368, 104
+  xy: 641, 2
   size: 120, 124
   orig: 120, 124
+  offset: 0, 0
+  index: -1
+traje_bombero
+  rotate: false
+  xy: 148, 538
+  size: 132, 483
+  orig: 132, 483
+  offset: 0, 0
+  index: -1
+traje_buzo
+  rotate: false
+  xy: 137, 34
+  size: 160, 483
+  orig: 160, 483
+  offset: 0, 0
+  index: -1
+traje_cocinero
+  rotate: false
+  xy: 2, 27
+  size: 133, 490
+  orig: 133, 490
+  offset: 0, 0
+  index: -1
+traje_frio
+  rotate: false
+  xy: 2, 519
+  size: 144, 502
+  orig: 144, 502
+  offset: 0, 0
+  index: -1
+traje_policia
+  rotate: false
+  xy: 282, 538
+  size: 132, 483
+  orig: 132, 483
+  offset: 0, 0
+  index: -1
+zapatos
+  rotate: false
+  xy: 299, 41
+  size: 116, 36
+  orig: 116, 36
+  offset: 0, 0
+  index: -1
+
+atlas3.png
+size: 512,512
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+auto
+  rotate: false
+  xy: 152, 132
+  size: 120, 109
+  orig: 120, 109
+  offset: 0, 0
+  index: -1
+avion
+  rotate: false
+  xy: 132, 30
+  size: 120, 100
+  orig: 120, 100
+  offset: 0, 0
+  index: -1
+character
+  rotate: false
+  xy: 2, 132
+  size: 148, 369
+  orig: 148, 369
+  offset: 0, 0
+  index: -1
+memocard_front
+  rotate: false
+  xy: 2, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+memocard_one
+  rotate: false
+  xy: 152, 373
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+memocard_six
+  rotate: false
+  xy: 152, 243
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+memocard_three
+  rotate: false
+  xy: 282, 373
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+memocard_two
+  rotate: false
+  xy: 282, 243
+  size: 128, 128
+  orig: 128, 128
   offset: 0, 0
   index: -1
