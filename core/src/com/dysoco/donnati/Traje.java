@@ -9,8 +9,13 @@ public class Traje extends Actor {
 
     private float scaleFactor = 2f;
 
+    public boolean movable = true;
+
     private TextureRegion texture;
-    private String key;
+    public String key;
+
+    private float ox;
+    private float oy;
 
     public Traje(String key, TextureRegion texture) {
         this.key = key;
@@ -39,12 +44,18 @@ public class Traje extends Actor {
                 tx = 640;
                 ty = 240;
                 break;
+            case 4:
+                tx = 512;
+                ty = 120;
+                break;
             default:
                 tx = 0;
                 ty = 0;
                 break;
         }
 
+        ox = tx;
+        oy = ty;
         setPosition(tx, ty);
     }
 
@@ -52,6 +63,14 @@ public class Traje extends Actor {
         setPosition(x, y);
         setSize(texture.getRegionWidth(), texture.getRegionHeight());
         scaleFactor = 1f;
+        movable = false;
+    }
+
+    public void goBack() {
+        setPosition(ox, oy);
+        setSize(texture.getRegionWidth()/scaleFactor, texture.getRegionHeight()/scaleFactor);
+        scaleFactor = 2f;
+        movable = true;
     }
 
     @Override
