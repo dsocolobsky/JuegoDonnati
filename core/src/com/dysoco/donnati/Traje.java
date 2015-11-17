@@ -49,6 +49,7 @@ public class Traje extends Actor {
     }
 
     public void finish(float x, float y) {
+        setPosition(x, y);
         setSize(texture.getRegionWidth(), texture.getRegionHeight());
         scaleFactor = 1f;
     }

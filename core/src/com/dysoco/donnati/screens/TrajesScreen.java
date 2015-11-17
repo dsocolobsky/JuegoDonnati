@@ -37,7 +37,7 @@ public class TrajesScreen extends Screen {
         stage.addActor(fondo);
 
         player = new Image(Assets.PLAYER_TEXTURE);
-        player.setPosition(40, 5);
+        player.setPosition(60, 5);
         stage.addActor(player);
 
         volver = new VolverButton(juego, 10, 420);
@@ -64,7 +64,7 @@ public class TrajesScreen extends Screen {
 
                 public void dragStop(InputEvent event, float x, float y, int pointer) {
                     if(traje.getBounds().overlaps( new Rectangle((int)player.getX(), (int)player.getY(), (int)player.getWidth(), (int)player.getHeight()))) {
-                        traje.finish(player.getX(), player.getY());
+                        traje.finish(player.getX(), player.getY()-7);
                     }
                 }
             });
