@@ -11,6 +11,10 @@ public class Assets {
     public static Texture FONDO_TEXTURE;
     public static Texture CHESTS_BACKGROUND;
 
+    public static Texture BACKGROUND_COCINA;
+
+    public static Texture FONDO_MEMO;
+
     public static Texture FONDO_COCINA;
     public static Texture FONDO_POLICIA;
     public static Texture FONDO_BOMBERO;
@@ -57,6 +61,15 @@ public class Assets {
 
     public static AtlasRegion MEMOCARD_BACK;
 
+    public static AtlasRegion MEMOCARD_ONE;
+    public static AtlasRegion MEMOCARD_TWO;
+    public static AtlasRegion MEMOCARD_THREE;
+    public static AtlasRegion MEMOCARD_FOUR;
+    public static AtlasRegion MEMOCARD_FIVE;
+    public static AtlasRegion MEMOCARD_SIX;
+
+    public static AtlasRegion MEMOCARD_FRONT;
+
     public static AtlasRegion PELO;
     public static AtlasRegion BUZO;
     public static AtlasRegion PANTALONES;
@@ -66,6 +79,11 @@ public class Assets {
     public static AtlasRegion COCINERO_TRAJE;
     public static AtlasRegion COCINERO_PANTALONES;
     public static AtlasRegion COCINERO_ZAPATOS;
+
+    public static AtlasRegion TRAJE_BOMBERO;
+    public static AtlasRegion TRAJE_POLICIA;
+    public static AtlasRegion TRAJE_COCINERO;
+    public static AtlasRegion TRAJE_FRIO;
 
     public static Sound SOUND_CORRECT;
     public static Sound SOUND_WRONG;
@@ -81,6 +99,10 @@ public class Assets {
 
         FONDO_TEXTURE = new Texture(Gdx.files.internal("textures/background.png"));
         CHESTS_BACKGROUND = new Texture(Gdx.files.internal("textures/chests_background.png"));
+
+        BACKGROUND_COCINA = new Texture(Gdx.files.internal("textures/cocina.jpg"));
+
+        FONDO_MEMO = new Texture(Gdx.files.internal("textures/fondo_memo.jpg"));
 
         FONDO_COCINA = new Texture(Gdx.files.internal("textures/fondo_cocina.jpg"));
         FONDO_POLICIA = new Texture(Gdx.files.internal("textures/fondo_policia.jpg"));
@@ -124,6 +146,16 @@ public class Assets {
 
         MEMOCARD_BACK = new AtlasRegion(atlas.findRegion("memocard_back"));
 
+        MEMOCARD_ONE = new AtlasRegion(atlas.findRegion("memocard_one"));
+        MEMOCARD_TWO = new AtlasRegion(atlas.findRegion("memocard_two"));
+        MEMOCARD_THREE = new AtlasRegion(atlas.findRegion("memocard_three"));
+        MEMOCARD_FOUR = new AtlasRegion(atlas.findRegion("memocard_four"));
+        MEMOCARD_FIVE = new AtlasRegion(atlas.findRegion("memocard_five"));
+        MEMOCARD_SIX = new AtlasRegion(atlas.findRegion("memocard_six"));
+
+        MEMOCARD_FRONT = new AtlasRegion(atlas.findRegion("memocard_front"));
+
+
         PELO = new AtlasRegion(atlas.findRegion("pelo"));
         BUZO = new AtlasRegion(atlas.findRegion("buzo"));
         PANTALONES = new AtlasRegion(atlas.findRegion("pantalones"));
@@ -133,6 +165,11 @@ public class Assets {
         COCINERO_TRAJE = new AtlasRegion(atlas.findRegion("cocinero_traje"));
         COCINERO_PANTALONES = new AtlasRegion(atlas.findRegion("cocinero_pantalones"));
         COCINERO_ZAPATOS = new AtlasRegion(atlas.findRegion("cocinero_zapatos"));
+
+        TRAJE_BOMBERO = new AtlasRegion(atlas.findRegion("traje_bombero"));
+        TRAJE_POLICIA = new AtlasRegion(atlas.findRegion("traje_policia"));
+        TRAJE_COCINERO = new AtlasRegion(atlas.findRegion("traje_cocinero"));
+        TRAJE_FRIO = new AtlasRegion(atlas.findRegion("traje_frio"));
 
         SOUND_CORRECT = Gdx.audio.newSound(Gdx.files.internal("sounds/correct.ogg"));
         SOUND_WRONG = Gdx.audio.newSound(Gdx.files.internal("sounds/wrong.ogg"));

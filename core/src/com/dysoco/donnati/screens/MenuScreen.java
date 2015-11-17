@@ -29,7 +29,7 @@ public class MenuScreen extends Screen {
             }
             public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
             }
-        });;
+        });
 
         stage.addActor(player);
 
@@ -39,7 +39,7 @@ public class MenuScreen extends Screen {
         gameTwo = new ScreenButton(juego, new MemoScreen(juego), Assets.GAME_TWO, 560, 320, 200, 128);
         stage.addActor(gameTwo);
 
-        gameThree = new ScreenButton(juego, new MemoScreen(juego), Assets.GAME_THREE, 300, 140, 200, 128);
+        gameThree = new ScreenButton(juego, new CocinaScreen(juego), Assets.GAME_THREE, 300, 140, 200, 128);
         stage.addActor(gameThree);
 
         gameFour = new ScreenButton(juego, new TrajesScreen(juego), Assets.GAME_FOUR, 560, 140, 200, 128);
