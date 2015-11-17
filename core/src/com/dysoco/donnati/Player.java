@@ -2,6 +2,7 @@ package com.dysoco.donnati;
 
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
 public class Player extends Actor {
@@ -57,6 +58,10 @@ public class Player extends Actor {
         batch.draw(torso.currentAtlas(), getX()+11, getY()+212);
 
         batch.draw(zapatos.currentAtlas(), getX()+11, getY()-5);
+    }
+
+    public Rectangle getBounds() {
+        return new Rectangle((int)getX(), (int)getY(), (int)getWidth(), (int)getHeight());
     }
 
 
