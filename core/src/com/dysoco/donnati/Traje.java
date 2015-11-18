@@ -20,7 +20,7 @@ public class Traje extends Actor {
     public Traje(String key, TextureRegion texture) {
         this.key = key;
         this.texture = texture;
-        setSize(texture.getRegionWidth()/3, texture.getRegionHeight()/3);
+        setSize(texture.getRegionWidth()/3.35f, texture.getRegionHeight()/3.35f);
     }
 
     public void setOrder(int order) {

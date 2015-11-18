@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
 public class Screen extends ScreenAdapter {
@@ -11,11 +12,19 @@ public class Screen extends ScreenAdapter {
     protected final Juego juego;
     protected Stage stage;
     protected Player player;
+    protected Image felicitaciones;
 
     public Screen(final Juego juego) {
         this.juego = juego;
         this.stage = new Stage(new FitViewport(juego.WINDOW_WIDTH, juego.WINDOW_HEIGHT), juego.batch);
         this.player = juego.player;
+        felicitaciones = new Image(Assets.FELICITACIONES);
+        felicitaciones.setScale(0.40f);
+    }
+
+    public void ganar() {
+        Assets.SOUND_APPLAUSE.play();
+        stage.addActor(felicitaciones);
     }
 
     @Override

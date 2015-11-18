@@ -75,7 +75,7 @@ public class MemoScreen extends Screen {
                                 canTouch = true;
                                 pares++;
                                 if(pares == 4) {
-                                    Assets.SOUND_APPLAUSE.play();
+                                    ganar();
                                     canTouch = false;
                                 }
                             } else {

@@ -8,6 +8,8 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 
 public class Assets {
 
+    public static Texture FELICITACIONES;
+
     public static Texture FONDO_TEXTURE;
     public static Texture CHESTS_BACKGROUND;
 
@@ -70,6 +72,20 @@ public class Assets {
 
     public static AtlasRegion MEMOCARD_FRONT;
 
+    public static AtlasRegion HAMB_PANABAJO;
+    public static AtlasRegion HAMB_CARNE;
+    public static AtlasRegion HAMB_LECHUGA;
+    public static AtlasRegion HAMB_QUESO;
+    public static AtlasRegion HAMB_TOMATES;
+    public static AtlasRegion HAMB_PANARRIBA;
+
+    public static AtlasRegion COC_PLATO;
+    public static AtlasRegion COC_CARNE;
+    public static AtlasRegion COC_LECHUGA;
+    public static AtlasRegion COC_PAN;
+    public static AtlasRegion COC_QUESO;
+    public static AtlasRegion COC_TOMATES;
+
     public static AtlasRegion PELO;
     public static AtlasRegion BUZO;
     public static AtlasRegion PANTALONES;
@@ -98,6 +114,8 @@ public class Assets {
         atlas = new TextureAtlas(Gdx.files.internal("textures/atlas.atlas"));
 
         VACIO = new AtlasRegion(atlas.findRegion("vacio"));
+
+        FELICITACIONES = new Texture(Gdx.files.internal("textures/felicitaciones.png"));
 
         FONDO_TEXTURE = new Texture(Gdx.files.internal("textures/background.png"));
         CHESTS_BACKGROUND = new Texture(Gdx.files.internal("textures/chests_background.png"));
@@ -157,6 +175,21 @@ public class Assets {
 
         MEMOCARD_FRONT = new AtlasRegion(atlas.findRegion("memocard_front"));
 
+
+
+        HAMB_PANABAJO = new AtlasRegion(atlas.findRegion("hamb_panabajo"));
+        HAMB_CARNE = new AtlasRegion(atlas.findRegion("hamb_carne"));
+        HAMB_LECHUGA = new AtlasRegion(atlas.findRegion("hamb_lechuga"));
+        HAMB_QUESO = new AtlasRegion(atlas.findRegion("hamb_queso"));
+        HAMB_TOMATES = new AtlasRegion(atlas.findRegion("hamb_tomate"));
+        HAMB_PANARRIBA = new AtlasRegion(atlas.findRegion("hamb_panarriba"));
+
+        COC_PLATO = new AtlasRegion(atlas.findRegion("plato"));
+        COC_CARNE = new AtlasRegion(atlas.findRegion("coc_carne"));
+        COC_LECHUGA = new AtlasRegion(atlas.findRegion("coc_lechuga"));
+        COC_PAN = new AtlasRegion(atlas.findRegion("coc_pan"));
+        COC_QUESO = new AtlasRegion(atlas.findRegion("coc_queso"));
+        COC_TOMATES = new AtlasRegion(atlas.findRegion("coc_tomates"));
 
         PELO = new AtlasRegion(atlas.findRegion("pelo"));
         BUZO = new AtlasRegion(atlas.findRegion("buzo"));

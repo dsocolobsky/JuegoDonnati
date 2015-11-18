@@ -86,7 +86,7 @@ public class TrajesScreen extends Screen {
                                 @Override
                                 public void run() {
                                     if((currentFondo + 1) == fondos.size()) {
-                                        Assets.SOUND_APPLAUSE.play(1.80f);
+                                        ganar();
                                     } else {
                                         currentFondo++;
                                         reset();

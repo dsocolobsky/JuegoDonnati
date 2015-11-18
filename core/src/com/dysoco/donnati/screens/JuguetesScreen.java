@@ -89,7 +89,7 @@ public class JuguetesScreen extends Screen {
                                 juguetesMetidos++;
 
                                 if(juguetesMetidos >= 6) {
-                                    Assets.SOUND_APPLAUSE.play();
+                                    ganar();
                                 }
                             } else if(overWrongChest(juguete, chest)) {
                                 event.getTarget().setPosition(juguete.originalX, juguete.originalY);
