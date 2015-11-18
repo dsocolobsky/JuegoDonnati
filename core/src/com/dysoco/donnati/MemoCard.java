@@ -15,8 +15,6 @@ public class MemoCard extends Actor {
     private final float OFFSET = 40;
 
     public boolean flipping = false;
-    public boolean flippingBack = false;
-    public boolean preFlippingBack = false;
 
     private TextureRegion front;
 
@@ -35,6 +33,7 @@ public class MemoCard extends Actor {
         this.setSize(128, 128);
         this.index = index;
         this.flipped = false;
+        this.flipping = false;
 
         frames = new TextureRegion[8];
 
@@ -102,17 +101,8 @@ public class MemoCard extends Actor {
         return this.flipped;
     }
 
-    public void flip(MemoCard other) {
-        if(other != null) {
-            this.other = other;
-        }
-        //this.flipped = !this.flipped;s
-        if(flipped) {
-            preFlippingBack = true;
-            flipped = false;
-        } else {
-            flipping = true;
-        }
+    public void flip() {
+        flipping = true;
     }
 
     public int getIndex() {
@@ -121,33 +111,25 @@ public class MemoCard extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        if(preFlippingBack) {
-            if(!(other.flipping || other.flippingBack)) {
-                flippingBack = true;
-                other.flipping = false;
-                other.flippingBack = false;
-                other.preFlippingBack = false;
-                preFlippingBack = false;
-            }
-        }
-
         if(flipping) {
-            time += Gdx.graphics.getDeltaTime();
-            currentFrame = animation.getKeyFrame(time, true);
-            if(animation.getKeyFrameIndex(time) == 7) {
-                time = 0;
-                flipping = false;
-                flipped = true;
-            }
-        } else if(flippingBack) {
-            animation.setPlayMode(Animation.PlayMode.REVERSED);
-            time += Gdx.graphics.getDeltaTime();
-            currentFrame = animation.getKeyFrame(time, true);
-            if(animation.getKeyFrameIndex(time) == 0) {
-                time = 0;
-                flipping = false;
-                flippingBack = false;
-                animation.setPlayMode(Animation.PlayMode.NORMAL);
+            if(!flipped) {
+                time += Gdx.graphics.getDeltaTime();
+                currentFrame = animation.getKeyFrame(time, true);
+                if (animation.getKeyFrameIndex(time) == 7) {
+                    time = 0;
+                    flipping = false;
+                    flipped = true;
+                }
+            } else {
+                animation.setPlayMode(Animation.PlayMode.REVERSED);
+                time += Gdx.graphics.getDeltaTime();
+                currentFrame = animation.getKeyFrame(time, true);
+                if(animation.getKeyFrameIndex(time) == 0) {
+                    time = 0;
+                    flipping = false;
+                    flipped = false;
+                    animation.setPlayMode(Animation.PlayMode.NORMAL);
+                }
             }
         }
 
@@ -155,5 +137,9 @@ public class MemoCard extends Actor {
         if(flipped) {
             batch.draw(front, this.getX()+OFFSET, this.getY()+OFFSET, front.getRegionWidth()/1.75f, front.getRegionHeight()/1.75f);
         }
+    }
+
+    public Rectangle getBounds() {
+        return new Rectangle((int)getX(), (int)getY(), (int)getWidth(), (int)getHeight());
     }
 }

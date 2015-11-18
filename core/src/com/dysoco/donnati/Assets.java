@@ -92,6 +92,7 @@ public class Assets {
 
     public static Sound SOUND_CHEST_OPEN;
     public static Sound SOUND_CHEST_CLOSE;
+    public static Sound SOUND_CARD;
 
     public static void load() {
         atlas = new TextureAtlas(Gdx.files.internal("textures/atlas.atlas"));
@@ -179,6 +180,8 @@ public class Assets {
 
         SOUND_CHEST_OPEN = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_open.ogg"));
         SOUND_CHEST_CLOSE = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_close.ogg"));
+
+        SOUND_CARD = Gdx.audio.newSound(Gdx.files.internal("sounds/card.ogg"));
     }
 
 }

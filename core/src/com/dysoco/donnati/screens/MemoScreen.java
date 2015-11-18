@@ -3,22 +3,28 @@ package com.dysoco.donnati.screens;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
+import com.badlogic.gdx.utils.Timer;
 import com.dysoco.donnati.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
+
+import static com.badlogic.gdx.utils.Timer.schedule;
 
 public class MemoScreen extends Screen {
 
     Image fondo;
 
     ArrayList<MemoCard> cards;
-    boolean secondFlip;
     MemoCard previousCard;
+
+    boolean secondFlip = false;
 
     VolverButton volver;
 
-    int pares;
+    int pares = 0;
+
+    boolean canTouch = true;
 
     public MemoScreen(final Juego juego) {
         super(juego);
@@ -29,7 +35,6 @@ public class MemoScreen extends Screen {
         volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
-        secondFlip = false;
         previousCard = null;
         pares = 0;
 
@@ -54,29 +59,40 @@ public class MemoScreen extends Screen {
                 final MemoCard card = (MemoCard)c;
                 c.addListener(new DragListener() {
                     public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
-                        if(!card.isFlipped() && !(card.flippingBack || card.flipping)) {
 
-                            if (previousCard == null) {
-                                card.flip(null);
-                                previousCard = card;
-                            } else {
-                                card.flip(previousCard);
-
-                                if(card.getIndex() != previousCard.getIndex()) {
-                                    card.flip(previousCard);
-                                    previousCard.flip(card);
-                                    Assets.SOUND_WRONG.play();
-                                } else {
-                                    Assets.SOUND_CORRECT.play();
-                                    pares++;
-                                    if(pares >= 4) {
-                                        Assets.SOUND_APPLAUSE.play();
-                                    }
-                                }
-
+                        if(!secondFlip && previousCard == null && canTouch) {
+                            card.flip();
+                            Assets.SOUND_CARD.play();
+                            previousCard = card;
+                        } else if(previousCard != null && !(previousCard.getBounds().overlaps(card.getBounds())) && canTouch) {
+                            canTouch = false;
+                            card.flip();
+                            Assets.SOUND_CARD.play();
+                            if(card.getIndex() == previousCard.getIndex()) {
+                                Assets.SOUND_CORRECT.play();
                                 previousCard = null;
+                                secondFlip = false;
+                                canTouch = true;
+                                pares++;
+                                if(pares == 4) {
+                                    Assets.SOUND_APPLAUSE.play();
+                                    canTouch = false;
+                                }
+                            } else {
+                                schedule(new Timer.Task() {
+                                    @Override
+                                    public void run() {
+                                        card.flip();
+                                        Assets.SOUND_CARD.play();
+                                        Assets.SOUND_WRONG.play(1.5f);
+                                        previousCard.flip();
+                                        Assets.SOUND_CARD.play();
+                                        previousCard = null;
+                                        secondFlip = false;
+                                        canTouch = true;
+                                    }
+                                }, 1.50f);
                             }
-
                         }
 
                         return false;
