@@ -1,7 +1,5 @@
 package com.dysoco.donnati.screens;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -10,7 +8,6 @@ import com.badlogic.gdx.utils.Timer;
 import com.dysoco.donnati.*;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 import static com.badlogic.gdx.utils.Timer.schedule;
 
@@ -23,7 +20,6 @@ public class CocinaScreen extends Screen {
     Comida currentComida;
     int currentIndex = 0;
 
-    Image plato;
     Image platos[];
 
     Image instruccion;
@@ -38,9 +34,17 @@ public class CocinaScreen extends Screen {
         volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
+        change();
+    }
+
+    private void change() {
         platos = new Image[6];
         for(int i = 0; i < 6; i++) {
-            platos[i] = new Image(Assets.COC_PLATO);
+            if(currentIndex == 0) {
+                platos[i] = new Image(Assets.COC_PLATO);
+            } else if(currentIndex == 1) {
+                platos[i] = new Image(Assets.VACIO);
+            }
             if(i != 0) {
                 platos[i].setScale(0.50f);
             }
@@ -60,6 +64,8 @@ public class CocinaScreen extends Screen {
         comidas = new ArrayList<Comida>();
 
         comidas.add(new Comida("hamburguesa"));
+        comidas.add(new Comida("taco"));
+
         currentComida = comidas.get(currentIndex);
         currentComida.setPosition(370+28, 75+20);
         stage.addActor(currentComida);
@@ -71,15 +77,28 @@ public class CocinaScreen extends Screen {
                 }
 
                 public void dragStop(InputEvent event, float x, float y, int pointer) {
-                    if (ingrediente.getBounds().overlaps(new Rectangle((int) platos[0].getX(), (int) platos[0].getY(), (int) platos[0].getWidth(), (int) platos[0].getHeight()))) {
+                    if (ingrediente.getBounds().overlaps(new Rectangle((int) platos[0].getX(), (int) platos[0].getY(), 220, 108))) {
                         if (ingrediente.key == currentComida.currentSprite + 1) {
+                            Assets.SOUND_CORRECT.play();
                             currentComida.currentSprite++;
                             ingrediente.remove();
 
-                            if (ingrediente.key == 4) {
-                                currentIndex++;
+                            if (currentIndex == 0 && ingrediente.key == 5) {
+                                Assets.SOUND_APPLAUSE.play();
+                                schedule(new Timer.Task() {
+                                    @Override
+                                    public void run() {
+                                        currentComida.remove();
+                                        instruccion.remove();
+                                        currentIndex++;
+                                        change();
+                                    }
+                                }, 2);
+                            } else if (currentIndex == 1 && ingrediente.key == 4) {
+                                ganar();
                             }
                         } else {
+                            Assets.SOUND_WRONG.play();
                             ingrediente.goBack();
                         }
                     }

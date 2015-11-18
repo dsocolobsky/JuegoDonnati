@@ -33,6 +33,18 @@ public class Comida extends Actor {
             sprites.add(Assets.HAMB_TOMATES);
             sprites.add(Assets.HAMB_LECHUGA);
             sprites.add(Assets.HAMB_PANARRIBA);
+        } else if(key.equals("taco")) {
+            ingredientes.add(new Ingrediente(3, Assets.TACO_DADITOS, 435, 250));
+            ingredientes.add(new Ingrediente(2, Assets.TACO_GUACAMOLE, 656, 120));
+            ingredientes.add(new Ingrediente(4, Assets.TACO_PAPAS, 210, 130));
+            ingredientes.add(new Ingrediente(1, Assets.TACO_PICADA, 630, 220));
+            ingredientes.add(new Ingrediente(5, Assets.TACO_BOWL, 255, 230));
+
+            sprites.add(Assets.TACO_1);
+            sprites.add(Assets.TACO_2);
+            sprites.add(Assets.TACO_3);
+            sprites.add(Assets.TACO_4);
+            sprites.add(Assets.TACO_5);
         }
 
         currentSprite = 0;

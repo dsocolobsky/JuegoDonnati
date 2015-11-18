@@ -86,6 +86,18 @@ public class Assets {
     public static AtlasRegion COC_QUESO;
     public static AtlasRegion COC_TOMATES;
 
+    public static AtlasRegion TACO_1;
+    public static AtlasRegion TACO_2;
+    public static AtlasRegion TACO_3;
+    public static AtlasRegion TACO_4;
+    public static AtlasRegion TACO_5;
+
+    public static AtlasRegion TACO_BOWL;
+    public static AtlasRegion TACO_PAPAS;
+    public static AtlasRegion TACO_GUACAMOLE;
+    public static AtlasRegion TACO_PICADA;
+    public static AtlasRegion TACO_DADITOS;
+
     public static AtlasRegion PELO;
     public static AtlasRegion BUZO;
     public static AtlasRegion PANTALONES;
@@ -190,6 +202,18 @@ public class Assets {
         COC_PAN = new AtlasRegion(atlas.findRegion("coc_pan"));
         COC_QUESO = new AtlasRegion(atlas.findRegion("coc_queso"));
         COC_TOMATES = new AtlasRegion(atlas.findRegion("coc_tomates"));
+
+        TACO_1 = new AtlasRegion(atlas.findRegion("taco1"));
+        TACO_2 = new AtlasRegion(atlas.findRegion("taco2"));
+        TACO_3 = new AtlasRegion(atlas.findRegion("taco3"));
+        TACO_4 = new AtlasRegion(atlas.findRegion("taco4"));
+        TACO_5 = new AtlasRegion(atlas.findRegion("taco5"));
+
+        TACO_BOWL = new AtlasRegion(atlas.findRegion("bowl"));
+        TACO_PAPAS = new AtlasRegion(atlas.findRegion("papas"));
+        TACO_DADITOS = new AtlasRegion(atlas.findRegion("daditos"));
+        TACO_GUACAMOLE = new AtlasRegion(atlas.findRegion("guacamole"));
+        TACO_PICADA = new AtlasRegion(atlas.findRegion("picada"));
 
         PELO = new AtlasRegion(atlas.findRegion("pelo"));
         BUZO = new AtlasRegion(atlas.findRegion("buzo"));

@@ -178,156 +178,191 @@ size: 1024,1024
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
+bowl
+  rotate: false
+  xy: 259, 5
+  size: 82, 56
+  orig: 82, 56
+  offset: 0, 0
+  index: -1
 button_back
   rotate: false
-  xy: 271, 599
+  xy: 271, 608
   size: 50, 50
   orig: 50, 50
   offset: 0, 0
   index: -1
 button_config
   rotate: false
-  xy: 271, 651
+  xy: 271, 660
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 character
   rotate: false
-  xy: 672, 157
+  xy: 672, 166
   size: 148, 369
   orig: 148, 369
   offset: 0, 0
   index: -1
 chest_green_closed
   rotate: false
-  xy: 354, 776
+  xy: 354, 785
   size: 349, 235
   orig: 349, 235
   offset: 0, 0
   index: -1
 chest_red_closed
   rotate: false
-  xy: 354, 539
+  xy: 354, 548
   size: 349, 235
   orig: 349, 235
   offset: 0, 0
   index: -1
 chest_red_open
   rotate: false
-  xy: 2, 717
+  xy: 2, 726
   size: 350, 294
   orig: 350, 294
   offset: 0, 0
   index: -1
 chico
   rotate: false
-  xy: 405, 80
+  xy: 405, 89
   size: 138, 457
   orig: 138, 457
   offset: 0, 0
   index: -1
 coc_tomates
   rotate: false
-  xy: 2, 2
+  xy: 2, 11
   size: 86, 54
   orig: 86, 54
   offset: 0, 0
   index: -1
 cocinero_gorro
   rotate: false
-  xy: 822, 165
+  xy: 822, 174
   size: 132, 92
   orig: 132, 92
   offset: 0, 0
   index: -1
+daditos
+  rotate: false
+  xy: 90, 2
+  size: 82, 56
+  orig: 82, 56
+  offset: 0, 0
+  index: -1
 doll
   rotate: false
-  xy: 137, 51
+  xy: 137, 60
   size: 120, 179
   orig: 120, 179
   offset: 0, 0
   index: -1
 game_one
   rotate: false
-  xy: 672, 32
+  xy: 672, 41
   size: 200, 123
   orig: 200, 123
   offset: 0, 0
   index: -1
 game_three
   rotate: false
-  xy: 822, 384
+  xy: 822, 393
   size: 200, 123
   orig: 200, 123
   offset: 0, 0
   index: -1
 game_two
   rotate: false
-  xy: 822, 259
+  xy: 822, 268
   size: 200, 123
   orig: 200, 123
   offset: 0, 0
   index: -1
+guacamole
+  rotate: false
+  xy: 174, 2
+  size: 82, 56
+  orig: 82, 56
+  offset: 0, 0
+  index: -1
 hombre
   rotate: false
-  xy: 545, 80
+  xy: 545, 89
   size: 125, 457
   orig: 125, 457
   offset: 0, 0
   index: -1
 memocard_back
   rotate: false
-  xy: 874, 35
+  xy: 874, 44
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 oso
   rotate: false
-  xy: 2, 58
+  xy: 2, 67
   size: 120, 165
   orig: 120, 165
   offset: 0, 0
   index: -1
+papas
+  rotate: false
+  xy: 343, 5
+  size: 82, 56
+  orig: 82, 56
+  offset: 0, 0
+  index: -1
+picada
+  rotate: false
+  xy: 427, 31
+  size: 82, 56
+  orig: 82, 56
+  offset: 0, 0
+  index: -1
 traje_bombero
   rotate: false
-  xy: 137, 232
+  xy: 137, 241
   size: 132, 483
   orig: 132, 483
   offset: 0, 0
   index: -1
 traje_buzo
   rotate: false
-  xy: 705, 528
+  xy: 705, 537
   size: 160, 483
   orig: 160, 483
   offset: 0, 0
   index: -1
 traje_cocinero
   rotate: false
-  xy: 2, 225
+  xy: 2, 234
   size: 133, 490
   orig: 133, 490
   offset: 0, 0
   index: -1
 traje_frio
   rotate: false
-  xy: 867, 509
+  xy: 867, 518
   size: 144, 502
   orig: 144, 502
   offset: 0, 0
   index: -1
 traje_policia
   rotate: false
-  xy: 271, 54
+  xy: 271, 63
   size: 132, 483
   orig: 132, 483
   offset: 0, 0
   index: -1
 zapatos
   rotate: false
-  xy: 259, 16
+  xy: 511, 51
   size: 116, 36
   orig: 116, 36
   offset: 0, 0
@@ -340,127 +375,162 @@ filter: Nearest,Nearest
 repeat: none
 auto
   rotate: false
-  xy: 278, 17
+  xy: 740, 142
   size: 120, 109
   orig: 120, 109
   offset: 0, 0
   index: -1
 avion
   rotate: false
-  xy: 416, 156
+  xy: 878, 275
   size: 120, 100
   orig: 120, 100
   offset: 0, 0
   index: -1
 chest_red
   rotate: false
-  xy: 546, 281
+  xy: 440, 13
   size: 90, 105
   orig: 90, 105
   offset: 0, 0
   index: -1
 hamb_carne
   rotate: false
-  xy: 2, 284
+  xy: 576, 383
   size: 152, 122
   orig: 152, 122
   offset: 0, 0
   index: -1
 hamb_lechuga
   rotate: false
-  xy: 2, 160
+  xy: 730, 383
   size: 152, 122
   orig: 152, 122
   offset: 0, 0
   index: -1
 hamb_panabajo
   rotate: false
-  xy: 2, 36
+  xy: 180, 256
   size: 152, 122
   orig: 152, 122
   offset: 0, 0
   index: -1
 hamb_panarriba
   rotate: false
-  xy: 220, 388
+  xy: 180, 132
   size: 152, 122
   orig: 152, 122
   offset: 0, 0
   index: -1
 hamb_queso
   rotate: false
-  xy: 374, 388
+  xy: 334, 256
   size: 152, 122
   orig: 152, 122
   offset: 0, 0
   index: -1
 hamb_tomate
   rotate: false
-  xy: 528, 388
+  xy: 334, 132
   size: 152, 122
   orig: 152, 122
   offset: 0, 0
   index: -1
 memocard_five
   rotate: false
-  xy: 682, 382
+  xy: 884, 377
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 memocard_four
   rotate: false
-  xy: 812, 382
+  xy: 180, 2
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 memocard_front
   rotate: false
-  xy: 156, 258
+  xy: 310, 2
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 memocard_one
   rotate: false
-  xy: 156, 128
+  xy: 488, 250
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 memocard_six
   rotate: false
-  xy: 286, 258
+  xy: 618, 253
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 memocard_three
   rotate: false
-  xy: 286, 128
+  xy: 748, 253
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 memocard_two
   rotate: false
-  xy: 416, 258
+  xy: 488, 120
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 pelota
   rotate: false
-  xy: 156, 2
+  xy: 618, 127
   size: 120, 124
   orig: 120, 124
   offset: 0, 0
   index: -1
 plato
   rotate: false
-  xy: 2, 408
+  xy: 2, 403
   size: 216, 102
   orig: 216, 102
+  offset: 0, 0
+  index: -1
+taco1
+  rotate: false
+  xy: 2, 276
+  size: 176, 125
+  orig: 176, 125
+  offset: 0, 0
+  index: -1
+taco2
+  rotate: false
+  xy: 2, 149
+  size: 176, 125
+  orig: 176, 125
+  offset: 0, 0
+  index: -1
+taco3
+  rotate: false
+  xy: 2, 22
+  size: 176, 125
+  orig: 176, 125
+  offset: 0, 0
+  index: -1
+taco4
+  rotate: false
+  xy: 220, 380
+  size: 176, 125
+  orig: 176, 125
+  offset: 0, 0
+  index: -1
+taco5
+  rotate: false
+  xy: 398, 380
+  size: 176, 125
+  orig: 176, 125
   offset: 0, 0
   index: -1

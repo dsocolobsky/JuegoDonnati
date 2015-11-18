@@ -5,14 +5,14 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
-import com.badlogic.gdx.utils.Timer;
 import com.dysoco.donnati.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-import static com.badlogic.gdx.utils.Timer.*;
+import static com.badlogic.gdx.utils.Timer.Task;
+import static com.badlogic.gdx.utils.Timer.schedule;
 
 public class TrajesScreen extends Screen {
 
