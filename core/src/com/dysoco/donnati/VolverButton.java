@@ -11,6 +11,8 @@ public class VolverButton extends Button {
 
         addListener(new InputListener() {
             public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                Assets.SOUND_WRONG.stop();
+                Assets.SOUND_CORRECT.stop();
                 Assets.SOUND_APPLAUSE.stop();
                 juego.setScreen(new MenuScreen(juego));
                 return false;
