@@ -12,47 +12,17 @@ public class Ingrediente extends Actor {
     public float ox;
     public float oy;
 
-    public Ingrediente(int key, TextureAtlas.AtlasRegion texture) {
+    public Ingrediente(int key, TextureAtlas.AtlasRegion texture, float x, float y) {
         this.key = key;
         this.texture = texture;
         setSize(texture.getRegionWidth(), texture.getRegionHeight());
-        setPosition(key);
+        setLocation(x, y);
     }
 
-    public void setPosition(int pos) {
-        float tx;
-        float ty;
-
-        switch(pos) {
-            case 1:
-                tx = 435;
-                ty = 250;
-                break;
-            case 2:
-                tx = 656;
-                ty = 120;
-                break;
-            case 3:
-                tx = 210;
-                ty = 130;
-                break;
-            case 4:
-                tx = 630;
-                ty = 220;
-                break;
-            case 5:
-                tx = 255;
-                ty = 230;
-                break;
-            default:
-                tx = 0;
-                ty = 0;
-                break;
-        }
-
-        ox = tx;
-        oy = ty;
-        setPosition(tx, ty);
+    public void setLocation(float x, float y) {
+        ox = x;
+        oy = y;
+        setPosition(x, y);
     }
 
     public void goBack() {

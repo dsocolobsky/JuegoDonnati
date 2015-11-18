@@ -21,6 +21,12 @@ public class Comida extends Actor {
         sprites = new ArrayList<TextureAtlas.AtlasRegion>();
 
         if(key.equals("hamburguesa")) {
+            ingredientes.add(new Ingrediente(1, Assets.COC_CARNE, 435, 250));
+            ingredientes.add(new Ingrediente(2, Assets.COC_QUESO, 656, 120));
+            ingredientes.add(new Ingrediente(3, Assets.COC_TOMATES, 210, 130));
+            ingredientes.add(new Ingrediente(4, Assets.COC_LECHUGA, 630, 220));
+            ingredientes.add(new Ingrediente(5, Assets.COC_PAN, 255, 230));
+
             sprites.add(Assets.HAMB_PANABAJO);
             sprites.add(Assets.HAMB_CARNE);
             sprites.add(Assets.HAMB_QUESO);
