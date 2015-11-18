@@ -135,7 +135,7 @@ public class MemoCard extends Actor {
         }
 
         batch.draw(currentFrame, this.getX(), this.getY());
-        if(flipped) {
+        if(flipped && !flipping) {
             switch(index) {
                 case 0:
                     offsetX = 28;
