@@ -12,7 +12,8 @@ import java.util.ArrayList;
 
 public class MemoCard extends Actor {
 
-    private final float OFFSET = 40;
+    private float offsetX = 0;
+    private float offsetY = 0;
 
     public boolean flipping = false;
 
@@ -135,7 +136,27 @@ public class MemoCard extends Actor {
 
         batch.draw(currentFrame, this.getX(), this.getY());
         if(flipped) {
-            batch.draw(front, this.getX()+OFFSET, this.getY()+OFFSET, front.getRegionWidth()/1.75f, front.getRegionHeight()/1.75f);
+            switch(index) {
+                case 0:
+                    offsetX = 28;
+                    offsetY = 12;
+                    break;
+                case 1:
+                    offsetX = 28;
+                    offsetY = 32;
+                    break;
+                case 2:
+                    offsetX = 28;
+                    offsetY = 35;
+                    break;
+                case 3:
+                    offsetX = 28;
+                    offsetY = 15;
+                    break;
+            }
+            batch.draw(front, this.getX()+offsetX, this.getY()+offsetY, front.getRegionWidth()/1.75f, front.getRegionHeight()/1.75f);
+            offsetX = 0;
+            offsetY = 0;
         }
     }
 
