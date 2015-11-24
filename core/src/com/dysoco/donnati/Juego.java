@@ -13,7 +13,9 @@ public class Juego extends Game {
 	public AssetManager assetManager;
 	public SpriteBatch batch;
 	public Player player;
-	
+
+	public boolean music = true;
+
 	@Override
 	public void create () {
 		assetManager = new AssetManager();

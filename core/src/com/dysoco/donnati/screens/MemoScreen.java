@@ -107,8 +107,10 @@ public class MemoScreen extends Screen {
 
     @Override
     public void show(){
-        Assets.MUSIC_MEMOTEST.setLooping(true);
-        Assets.MUSIC_MEMOTEST.play();
+        if(juego.music) {
+            Assets.MUSIC_MEMOTEST.setLooping(true);
+            Assets.MUSIC_MEMOTEST.play();
+        }
 
         super.show();
     }

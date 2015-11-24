@@ -35,6 +35,8 @@ public class Assets {
     public static AtlasRegion RIGHT_BUTTON;
 
     public static AtlasRegion INFO_BUTTON;
+    public static AtlasRegion VOLOFF_BUTTON;
+    public static AtlasRegion VOLON_BUTTON;
 
     public static AtlasRegion BACK_BUTTON;
 
@@ -161,6 +163,8 @@ public class Assets {
         RIGHT_BUTTON = new AtlasRegion(atlas.findRegion("button_left"));
 
         INFO_BUTTON = new AtlasRegion(atlas.findRegion("informacion"));
+        VOLOFF_BUTTON = new AtlasRegion(atlas.findRegion("voloff"));
+        VOLON_BUTTON = new AtlasRegion(atlas.findRegion("volon"));
 
         BACK_BUTTON = new AtlasRegion(atlas.findRegion("button_back"));
 

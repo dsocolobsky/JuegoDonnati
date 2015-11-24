@@ -106,8 +106,10 @@ public class JuguetesScreen extends Screen {
 
     @Override
     public void show(){
-        Assets.MUSIC_JUGUETES.setLooping(true);
-        Assets.MUSIC_JUGUETES.play();
+        if(juego.music) {
+            Assets.MUSIC_JUGUETES.setLooping(true);
+            Assets.MUSIC_JUGUETES.play();
+        }
 
         super.show();
     }

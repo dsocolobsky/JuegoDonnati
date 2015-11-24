@@ -1,6 +1,5 @@
 package com.dysoco.donnati.screens;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -8,6 +7,8 @@ import com.dysoco.donnati.*;
 
 public class MenuScreen extends Screen {
     Image fondo;
+
+    Button volumen;
 
     ScreenButton infoButton;
     ScreenButton gameOne;
@@ -50,14 +51,41 @@ public class MenuScreen extends Screen {
 
         gameFour = new ScreenButton(juego, new TrajesScreen(juego), Assets.GAME_FOUR, 560, 140, 200, 128);
         stage.addActor(gameFour);
+
+        if(juego.music) {
+            volumen = new Button(Assets.VOLON_BUTTON, 690, 20, 50, 50);
+        } else {
+            volumen = new Button(Assets.VOLOFF_BUTTON, 690, 20, 50, 50);
+        }
+        volumen.addListener(new InputListener() {
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                if(juego.music) {
+                    juego.music = false;
+                    volumen.texture = Assets.VOLOFF_BUTTON;
+                    Assets.MUSIC_MENU.setLooping(false);
+                    Assets.MUSIC_MENU.stop();
+                } else {
+                    juego.music = true;
+                    volumen.texture = Assets.VOLON_BUTTON;
+                    Assets.MUSIC_MENU.setLooping(true);
+                    Assets.MUSIC_MENU.play();
+                }
+                return false;
+            }
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+            }
+        });
+        stage.addActor(volumen);
     }
 
     @Override
     public void show(){
         super.show();
 
-        Assets.MUSIC_MENU.setLooping(true);
-        Assets.MUSIC_MENU.play();
+        if(juego.music) {
+            Assets.MUSIC_MENU.setLooping(true);
+            Assets.MUSIC_MENU.play();
+        }
     }
 
 }

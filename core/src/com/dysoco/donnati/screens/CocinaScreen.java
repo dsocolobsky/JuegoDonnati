@@ -115,9 +115,10 @@ public class CocinaScreen extends Screen {
 
     @Override
     public void show(){
-        Assets.MUSIC_COCINA.setLooping(true);
-        Assets.MUSIC_COCINA.play();
-
+        if(juego.music) {
+            Assets.MUSIC_COCINA.setLooping(true);
+            Assets.MUSIC_COCINA.play();
+        }
         super.show();
     }
 }

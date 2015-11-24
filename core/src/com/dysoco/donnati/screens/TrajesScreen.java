@@ -109,9 +109,11 @@ public class TrajesScreen extends Screen {
     }
 
     @Override
-    public void show(){
-        Assets.MUSIC_TRAJES.setLooping(true);
-        Assets.MUSIC_TRAJES.play();
+    public void show() {
+        if(juego.music) {
+            Assets.MUSIC_TRAJES.setLooping(true);
+            Assets.MUSIC_TRAJES.play();
+        }
 
         super.show();
     }
