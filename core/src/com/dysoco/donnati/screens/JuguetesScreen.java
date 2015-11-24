@@ -11,7 +11,6 @@ import java.util.Collections;
 public class JuguetesScreen extends Screen {
 
     Image background;
-    VolverButton volver;
 
     public static enum ChestColor {
         BLUE, GREEN, RED
@@ -31,7 +30,6 @@ public class JuguetesScreen extends Screen {
         background.setScale(0.5f);
         stage.addActor(background);
 
-        volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
         chests = new ArrayList<Chest>();

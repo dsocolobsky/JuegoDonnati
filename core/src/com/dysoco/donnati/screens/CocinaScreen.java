@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import static com.badlogic.gdx.utils.Timer.schedule;
 
 public class CocinaScreen extends Screen {
-
-    VolverButton volver;
     Image fondo;
 
     ArrayList<Comida> comidas;
@@ -31,7 +29,6 @@ public class CocinaScreen extends Screen {
         fondo.setScale(0.45f);
         stage.addActor(fondo);
 
-        volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
         change();

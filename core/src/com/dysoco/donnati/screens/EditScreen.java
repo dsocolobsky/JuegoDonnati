@@ -6,8 +6,6 @@ import com.dysoco.donnati.*;
 public class EditScreen extends Screen {
     Image fondo;
 
-    VolverButton volver;
-
     RopaButton[] leftButton;
     Button[] rightButton;
 
@@ -19,9 +17,6 @@ public class EditScreen extends Screen {
 
         player.setPosition(328, 5);
         stage.addActor(player);
-
-        volver = new VolverButton(juego, 10, 420);
-        stage.addActor(volver);
 
         leftButton = new RopaButton[4];
         rightButton = new Button[4];
@@ -43,6 +38,8 @@ public class EditScreen extends Screen {
         for(Button b : rightButton) {
             stage.addActor(b);
         }
+
+        stage.addActor(volver);
     }
 
 }

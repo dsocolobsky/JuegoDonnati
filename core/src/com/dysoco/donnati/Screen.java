@@ -13,6 +13,7 @@ public class Screen extends ScreenAdapter {
     protected Stage stage;
     protected Player player;
     protected Image felicitaciones;
+    protected VolverButton volver;
 
     public Screen(final Juego juego) {
         this.juego = juego;
@@ -20,6 +21,7 @@ public class Screen extends ScreenAdapter {
         this.player = juego.player;
         felicitaciones = new Image(Assets.FELICITACIONES);
         felicitaciones.setScale(0.40f);
+        volver = new VolverButton(juego, 10, 420);
     }
 
     public void ganar() {

@@ -19,9 +19,6 @@ public class MemoScreen extends Screen {
     MemoCard previousCard;
 
     boolean secondFlip = false;
-
-    VolverButton volver;
-
     int pares = 0;
 
     boolean canTouch = true;
@@ -32,7 +29,6 @@ public class MemoScreen extends Screen {
         fondo = new Image(Assets.FONDO_MEMO);
         stage.addActor(fondo);
 
-        volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
         previousCard = null;

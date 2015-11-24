@@ -16,7 +16,6 @@ import static com.badlogic.gdx.utils.Timer.schedule;
 
 public class TrajesScreen extends Screen {
 
-    VolverButton volver;
     int currentFondo;
     ArrayList<Texture> fondos;
     Image fondo;
@@ -49,7 +48,6 @@ public class TrajesScreen extends Screen {
         player.setPosition(60, 5);
         stage.addActor(player);
 
-        volver = new VolverButton(juego, 10, 420);
         stage.addActor(volver);
 
         trajes = new ArrayList<Traje>();
