@@ -27,6 +27,8 @@ public class Screen extends ScreenAdapter {
     public void ganar() {
         Assets.SOUND_APPLAUSE.play();
         stage.addActor(felicitaciones);
+
+        volver.grande();
     }
 
     @Override

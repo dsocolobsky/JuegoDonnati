@@ -29,8 +29,6 @@ public class MemoScreen extends Screen {
         fondo = new Image(Assets.FONDO_MEMO);
         stage.addActor(fondo);
 
-        stage.addActor(volver);
-
         previousCard = null;
         pares = 0;
 
@@ -99,6 +97,8 @@ public class MemoScreen extends Screen {
                 stage.addActor(c);
             }
         }
+
+        stage.addActor(volver);
 
     }
 
