@@ -2,12 +2,15 @@ package com.dysoco.donnati;
 
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.dysoco.donnati.screens.JuguetesScreen.ChestColor;
 
 public class Chest extends Actor {
+
+    private ShapeRenderer shape;
 
     private TextureRegion current;
     private TextureRegion chestClosed;
@@ -24,7 +27,11 @@ public class Chest extends Actor {
     private boolean playOpenSound;
     private boolean playCloseSound;
 
+    private float offset = 30f;
+
     public Chest(ChestColor color) {
+        shape = new ShapeRenderer();
+
         this.chestColor = color;
 
         switch (chestColor) {
@@ -43,7 +50,7 @@ public class Chest extends Actor {
         }
 
         this.current = chestClosed;
-        this.setSize(chestClosed.getRegionWidth()/2, chestClosed.getRegionHeight()/8);
+        this.setSize(chestOpen.getRegionWidth()/2.65f, chestOpen.getRegionHeight()/2);
 
         shadowPos = new Vector2();
         altShadowPos = new Vector2();
@@ -55,21 +62,21 @@ public class Chest extends Actor {
     public void setOrder(int order) {
         switch(order) {
             case 0:
-                this.setPosition(20, 200);
+                this.setPosition(20, 200+offset);
                 shadowPos.set(-19, 113);
                 altShadowPos.set(-38, 120);
                 this.shadowClosed = Assets.SHADOW_LEFT_CLOSED;
                 this.shadowOpen = Assets.SHADOW_LEFT_OPEN;
                 break;
             case 1:
-                this.setPosition(320, 200);
+                this.setPosition(320, 200+offset);
                 shadowPos.set(280, 112);
                 altShadowPos.set(276, 120);
                 this.shadowClosed = Assets.SHADOW_MIDDLE_CLOSED;
                 this.shadowOpen = Assets.SHADOW_MIDDLE_OPEN;
                 break;
             case 2:
-                this.setPosition(610, 200);
+                this.setPosition(610, 200+offset);
                 shadowPos.set(590, 112);
                 altShadowPos.set(570, 122);
                 this.shadowClosed = Assets.SHADOW_RIGHT_CLOSED;
@@ -87,7 +94,6 @@ public class Chest extends Actor {
     public void openChest() {
         current = chestOpen;
         currentShadow = shadowOpen;
-        this.setSize(chestOpen.getRegionWidth()/2, chestOpen.getRegionHeight()/8);
 
         if(playOpenSound) {
             Assets.SOUND_CHEST_OPEN.play(0.50f);
@@ -99,7 +105,6 @@ public class Chest extends Actor {
     public void closeChest() {
         current = chestClosed;
         currentShadow = shadowClosed;
-        this.setSize(chestClosed.getRegionWidth()/2, chestClosed.getRegionHeight()/8);
 
         if(playCloseSound) {
             Assets.SOUND_CHEST_CLOSE.play(0.50f);
@@ -110,7 +115,7 @@ public class Chest extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        batch.draw(current, this.getX(), this.getY(), current.getRegionWidth()/2, current.getRegionHeight()/2);
+        batch.draw(current, this.getX(), this.getY()-offset, current.getRegionWidth()/2, current.getRegionHeight()/2);
         if(!isOpen()) {
             batch.draw(currentShadow, shadowPos.x, shadowPos.y, currentShadow.getRegionWidth() / 2, currentShadow.getRegionHeight() / 2);
         } else {
