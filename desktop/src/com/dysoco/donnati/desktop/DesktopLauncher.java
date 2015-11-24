@@ -12,7 +12,7 @@ public class DesktopLauncher {
 		config.width = 800;
 		config.height = 480;
 
-		//TexturePacker.process("textures/topack", "textures", "atlas");
+		TexturePacker.process("textures/topack", "textures", "atlas");
 
 		new LwjglApplication(new Juego(), config);
 	}

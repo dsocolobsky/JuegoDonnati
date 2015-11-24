@@ -11,6 +11,7 @@ public class Assets {
 
     public static Texture FELICITACIONES;
 
+    public static Texture CREDITOS_TEXTURE;
     public static Texture FONDO_TEXTURE;
     public static Texture CHESTS_BACKGROUND;
 
@@ -32,6 +33,8 @@ public class Assets {
     public static AtlasRegion EDIT_BUTTON;
     public static AtlasRegion LEFT_BUTTON;
     public static AtlasRegion RIGHT_BUTTON;
+
+    public static AtlasRegion INFO_BUTTON;
 
     public static AtlasRegion BACK_BUTTON;
 
@@ -140,6 +143,8 @@ public class Assets {
         FONDO_TEXTURE = new Texture(Gdx.files.internal("textures/background.png"));
         CHESTS_BACKGROUND = new Texture(Gdx.files.internal("textures/chests_background.png"));
 
+        CREDITOS_TEXTURE = new Texture(Gdx.files.internal("textures/creditos.png"));
+
         BACKGROUND_COCINA = new Texture(Gdx.files.internal("textures/cocina.jpg"));
 
         FONDO_MEMO = new Texture(Gdx.files.internal("textures/fondo_memo.jpg"));
@@ -154,6 +159,8 @@ public class Assets {
         EDIT_BUTTON = new AtlasRegion(atlas.findRegion("button_config"));
         LEFT_BUTTON = new AtlasRegion(atlas.findRegion("button_right"));
         RIGHT_BUTTON = new AtlasRegion(atlas.findRegion("button_left"));
+
+        INFO_BUTTON = new AtlasRegion(atlas.findRegion("informacion"));
 
         BACK_BUTTON = new AtlasRegion(atlas.findRegion("button_back"));
 

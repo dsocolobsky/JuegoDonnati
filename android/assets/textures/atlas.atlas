@@ -297,6 +297,13 @@ hombre
   orig: 125, 457
   offset: 0, 0
   index: -1
+informacion
+  rotate: false
+  xy: 271, 556
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
 memocard_back
   rotate: false
   xy: 874, 44

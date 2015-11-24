@@ -4,14 +4,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.dysoco.donnati.Assets;
-import com.dysoco.donnati.Juego;
-import com.dysoco.donnati.Screen;
-import com.dysoco.donnati.ScreenButton;
+import com.dysoco.donnati.*;
 
 public class MenuScreen extends Screen {
     Image fondo;
 
+    ScreenButton infoButton;
     ScreenButton gameOne;
     ScreenButton gameTwo;
     ScreenButton gameThree;
@@ -37,6 +35,9 @@ public class MenuScreen extends Screen {
         });
 
         stage.addActor(player);
+
+        infoButton = new ScreenButton(juego, new InfoScreen(juego), Assets.INFO_BUTTON, 600, 20, 50, 50);
+        stage.addActor(infoButton);
 
         gameOne = new ScreenButton(juego, new JuguetesScreen(juego), Assets.GAME_ONE, 300, 320, 200, 128);
         stage.addActor(gameOne);
