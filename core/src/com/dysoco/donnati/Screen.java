@@ -32,7 +32,10 @@ public class Screen extends ScreenAdapter {
     }
 
     @Override
-    public void show(){
+    public void show() {
+        Assets.MUSIC_MENU.stop();
+        Assets.MUSIC_MENU.setLooping(false);
+
         super.show();
 
         Gdx.input.setInputProcessor(stage);

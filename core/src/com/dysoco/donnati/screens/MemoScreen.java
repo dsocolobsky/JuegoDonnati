@@ -4,7 +4,10 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
 import com.badlogic.gdx.utils.Timer;
-import com.dysoco.donnati.*;
+import com.dysoco.donnati.Assets;
+import com.dysoco.donnati.Juego;
+import com.dysoco.donnati.MemoCard;
+import com.dysoco.donnati.Screen;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -100,6 +103,14 @@ public class MemoScreen extends Screen {
 
         stage.addActor(volver);
 
+    }
+
+    @Override
+    public void show(){
+        Assets.MUSIC_MEMOTEST.setLooping(true);
+        Assets.MUSIC_MEMOTEST.play();
+
+        super.show();
     }
 
 }

@@ -104,6 +104,14 @@ public class JuguetesScreen extends Screen {
         }
     }
 
+    @Override
+    public void show(){
+        Assets.MUSIC_JUGUETES.setLooping(true);
+        Assets.MUSIC_JUGUETES.play();
+
+        super.show();
+    }
+
     private boolean overCorrectChest(Juguete juguete, Chest chest) {
         if(juguete.getBounds().overlaps(chest.getBounds())) {
             return juguete.chestColor == chest.chestColor;

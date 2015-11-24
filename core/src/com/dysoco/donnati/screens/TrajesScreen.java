@@ -5,7 +5,10 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
-import com.dysoco.donnati.*;
+import com.dysoco.donnati.Assets;
+import com.dysoco.donnati.Juego;
+import com.dysoco.donnati.Screen;
+import com.dysoco.donnati.Traje;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -103,6 +106,14 @@ public class TrajesScreen extends Screen {
 
             stage.addActor(t);
         }
+    }
+
+    @Override
+    public void show(){
+        Assets.MUSIC_TRAJES.setLooping(true);
+        Assets.MUSIC_TRAJES.play();
+
+        super.show();
     }
 
     private void reset() {

@@ -1,12 +1,15 @@
 package com.dysoco.donnati.screens;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.dysoco.donnati.*;
+import com.dysoco.donnati.Assets;
+import com.dysoco.donnati.Juego;
+import com.dysoco.donnati.Screen;
+import com.dysoco.donnati.ScreenButton;
 
 public class MenuScreen extends Screen {
-    Button editButton;
     Image fondo;
 
     ScreenButton gameOne;
@@ -24,6 +27,8 @@ public class MenuScreen extends Screen {
 
         player.addListener(new InputListener() {
             public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                Assets.MUSIC_MENU.stop();
+                Assets.MUSIC_MENU.setLooping(false);
                 juego.setScreen(new EditScreen(juego));
                 return false;
             }
@@ -44,6 +49,14 @@ public class MenuScreen extends Screen {
 
         gameFour = new ScreenButton(juego, new TrajesScreen(juego), Assets.GAME_FOUR, 560, 140, 200, 128);
         stage.addActor(gameFour);
+    }
+
+    @Override
+    public void show(){
+        super.show();
+
+        Assets.MUSIC_MENU.setLooping(true);
+        Assets.MUSIC_MENU.play();
     }
 
 }

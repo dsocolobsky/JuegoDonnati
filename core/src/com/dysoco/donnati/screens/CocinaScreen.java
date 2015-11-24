@@ -112,4 +112,12 @@ public class CocinaScreen extends Screen {
         instruccion.setPosition(20, 200);
         stage.addActor(instruccion);
     }
+
+    @Override
+    public void show(){
+        Assets.MUSIC_COCINA.setLooping(true);
+        Assets.MUSIC_COCINA.play();
+
+        super.show();
+    }
 }

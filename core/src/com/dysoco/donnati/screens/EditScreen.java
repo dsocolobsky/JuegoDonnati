@@ -42,4 +42,12 @@ public class EditScreen extends Screen {
         stage.addActor(volver);
     }
 
+    @Override
+    public void show() {
+        Assets.MUSIC_EDITAR.setLooping(true);
+        Assets.MUSIC_EDITAR.play();
+
+        super.show();
+    }
+
 }

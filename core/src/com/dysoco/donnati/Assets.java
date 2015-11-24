@@ -1,6 +1,7 @@
 package com.dysoco.donnati;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -122,6 +123,13 @@ public class Assets {
     public static Sound SOUND_CHEST_CLOSE;
     public static Sound SOUND_CARD;
 
+    public static Music MUSIC_MENU;
+    public static Music MUSIC_EDITAR;
+    public static Music MUSIC_JUGUETES;
+    public static Music MUSIC_MEMOTEST;
+    public static Music MUSIC_COCINA;
+    public static Music MUSIC_TRAJES;
+
     public static void load() {
         atlas = new TextureAtlas(Gdx.files.internal("textures/atlas.atlas"));
 
@@ -187,8 +195,6 @@ public class Assets {
 
         MEMOCARD_FRONT = new AtlasRegion(atlas.findRegion("memocard_front"));
 
-
-
         HAMB_PANABAJO = new AtlasRegion(atlas.findRegion("hamb_panabajo"));
         HAMB_CARNE = new AtlasRegion(atlas.findRegion("hamb_carne"));
         HAMB_LECHUGA = new AtlasRegion(atlas.findRegion("hamb_lechuga"));
@@ -239,6 +245,20 @@ public class Assets {
         SOUND_CHEST_CLOSE = Gdx.audio.newSound(Gdx.files.internal("sounds/chest_close.ogg"));
 
         SOUND_CARD = Gdx.audio.newSound(Gdx.files.internal("sounds/card.ogg"));
+
+        MUSIC_MENU = Gdx.audio.newMusic(Gdx.files.internal("music/menu.mp3"));
+        MUSIC_EDITAR = Gdx.audio.newMusic(Gdx.files.internal("music/editar.mp3"));
+        MUSIC_JUGUETES = Gdx.audio.newMusic(Gdx.files.internal("music/juguetes.mp3"));
+        MUSIC_MEMOTEST = Gdx.audio.newMusic(Gdx.files.internal("music/memotest.mp3"));
+        MUSIC_COCINA = Gdx.audio.newMusic(Gdx.files.internal("music/cocina.mp3"));
+        MUSIC_TRAJES = Gdx.audio.newMusic(Gdx.files.internal("music/trajes.mp3"));
+
+        MUSIC_MENU.setVolume(0.5f);
+        MUSIC_EDITAR.setVolume(0.5f);
+        MUSIC_JUGUETES.setVolume(0.5f);
+        MUSIC_MEMOTEST.setVolume(0.5f);
+        MUSIC_COCINA.setVolume(0.5f);
+        MUSIC_TRAJES.setVolume(0.5f);
     }
 
 }
