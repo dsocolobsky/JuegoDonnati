@@ -23,7 +23,7 @@ public class Juego extends Game {
 
         Assets.load();
 
-        player = new Player(new TextureRegion(Assets.PLAYER_TEXTURE));
+        player = new Player(true, 2);
 
         setScreen(new EditScreen(this));
 	}

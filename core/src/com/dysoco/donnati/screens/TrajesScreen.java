@@ -47,7 +47,7 @@ public class TrajesScreen extends Screen {
         fondo.setScale(0.5f);
         stage.addActor(fondo);
 
-        player = new Image(Assets.PLAYER_TEXTURE);
+        player = new Image(Assets.HOMBRE_BLANCO);
         player.setPosition(60, 5);
         stage.addActor(player);
 

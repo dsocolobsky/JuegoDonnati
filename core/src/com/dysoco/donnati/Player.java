@@ -8,13 +8,20 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 public class Player extends Actor {
     TextureRegion texture;
 
+    public boolean hombre;
+    public int color;
+
     public ChangableCollection pelos;
     public ChangableCollection torso;
     public ChangableCollection piernas;
     public ChangableCollection zapatos;
 
-    public Player(TextureRegion texture) {
-        this.texture = texture;
+    public Player(boolean hombre, int color) {
+        this.hombre = hombre;
+        this.color = color;
+
+        change(hombre, color);
+
         setBounds(0, 0, texture.getRegionWidth(), texture.getRegionHeight());
 
         pelos = new ChangableCollection();
@@ -37,6 +44,37 @@ public class Player extends Actor {
         zapatos.add("vacio", Assets.VACIO);
         zapatos.add("zapatos", Assets.ZAPATOS);
         zapatos.add("cocinero", Assets.COCINERO_ZAPATOS);
+    }
+
+    public void change(boolean hombre, int color) {
+        this.hombre = hombre;
+        this.color = color;
+
+        if(hombre) {
+            switch(color) {
+                case 1:
+                    texture = Assets.HOMBRE_BLANCO;
+                    break;
+                case 2:
+                    texture = Assets.HOMBRE_CANELA;
+                    break;
+                case 3:
+                    texture = Assets.HOMBRE_YOEL;
+                    break;
+            }
+        } else {
+            switch(color) {
+                case 1:
+                    texture = Assets.MUJER_BLANCO;
+                    break;
+                case 2:
+                    texture = Assets.MUJER_CANELA;
+                    break;
+                case 3:
+                    texture = Assets.MUJER_YOEL;
+                    break;
+            }
+        }
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.dysoco.donnati.screens;
 
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.dysoco.donnati.*;
 
@@ -8,6 +10,13 @@ public class EditScreen extends Screen {
 
     RopaButton[] leftButton;
     Button[] rightButton;
+
+    Button colorBlanco;
+    Button colorCanela;
+    Button colorYoel;
+
+    Button masculino;
+    Button femenino;
 
     public EditScreen(final Juego juego) {
         super(juego);
@@ -38,6 +47,61 @@ public class EditScreen extends Screen {
         for(Button b : rightButton) {
             stage.addActor(b);
         }
+
+        colorBlanco = new Button(Assets.BLANCO_BUTTON, 105, 330, 50, 50);
+        colorBlanco.addListener(new InputListener() {
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                player.change(player.hombre, 1);
+                return false;
+            }
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+            }
+        });
+        stage.addActor(colorBlanco);
+
+        colorCanela = new Button(Assets.CANELA_BUTTON, 105, 250, 50, 50);
+        colorCanela.addListener(new InputListener() {
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                player.change(player.hombre, 2);
+                return false;
+            }
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+            }
+        });
+        stage.addActor(colorCanela);
+
+        colorYoel = new Button(Assets.YOEL_BUTTON, 105, 170, 50, 50);
+        colorYoel.addListener(new InputListener() {
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                player.change(player.hombre, 3);
+                return false;
+            }
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+            }
+        });
+        stage.addActor(colorYoel);
+
+        masculino = new Button(Assets.MASCULINO_BUTTON, 630, 290, 50, 50);
+        masculino.addListener(new InputListener() {
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                player.change(true, player.color);
+                return false;
+            }
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+            }
+        });
+        stage.addActor(masculino);
+
+        femenino = new Button(Assets.FEMENINO_BUTTON, 630, 210, 50, 50);
+        femenino.addListener(new InputListener() {
+            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+                player.change(false, player.color);
+                return false;
+            }
+            public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+            }
+        });
+        stage.addActor(femenino);
 
         stage.addActor(volver);
     }

@@ -29,7 +29,14 @@ public class Assets {
 
     public static AtlasRegion VACIO;
 
-    public static AtlasRegion PLAYER_TEXTURE;
+    public static AtlasRegion HOMBRE_BLANCO;
+    public static AtlasRegion HOMBRE_CANELA;
+    public static AtlasRegion HOMBRE_YOEL;
+
+    public static AtlasRegion MUJER_BLANCO;
+    public static AtlasRegion MUJER_CANELA;
+    public static AtlasRegion MUJER_YOEL;
+
     public static AtlasRegion EDIT_BUTTON;
     public static AtlasRegion LEFT_BUTTON;
     public static AtlasRegion RIGHT_BUTTON;
@@ -37,8 +44,14 @@ public class Assets {
     public static AtlasRegion INFO_BUTTON;
     public static AtlasRegion VOLOFF_BUTTON;
     public static AtlasRegion VOLON_BUTTON;
-
     public static AtlasRegion BACK_BUTTON;
+
+    public static AtlasRegion MASCULINO_BUTTON;
+    public static AtlasRegion FEMENINO_BUTTON;
+
+    public static AtlasRegion BLANCO_BUTTON;
+    public static AtlasRegion CANELA_BUTTON;
+    public static AtlasRegion YOEL_BUTTON;
 
     public static AtlasRegion GAME_ONE;
     public static AtlasRegion GAME_TWO;
@@ -157,10 +170,24 @@ public class Assets {
         FONDO_AGUA = new Texture(Gdx.files.internal("textures/fondo_agua.jpg"));
         FONDO_FRIO = new Texture(Gdx.files.internal("textures/fondo_frio.jpg"));
 
-        PLAYER_TEXTURE = new AtlasRegion(atlas.findRegion("hombre"));
+        HOMBRE_BLANCO = new AtlasRegion(atlas.findRegion("hombre_blanco"));
+        HOMBRE_CANELA = new AtlasRegion(atlas.findRegion("hombre_canela"));
+        HOMBRE_YOEL = new AtlasRegion(atlas.findRegion("hombre_yoel"));
+
+        MUJER_BLANCO = new AtlasRegion(atlas.findRegion("mujer_blanco"));
+        MUJER_CANELA = new AtlasRegion(atlas.findRegion("mujer_canela"));
+        MUJER_YOEL = new AtlasRegion(atlas.findRegion("mujer_yoel"));
+
         EDIT_BUTTON = new AtlasRegion(atlas.findRegion("button_config"));
         LEFT_BUTTON = new AtlasRegion(atlas.findRegion("button_right"));
         RIGHT_BUTTON = new AtlasRegion(atlas.findRegion("button_left"));
+
+        MASCULINO_BUTTON = new AtlasRegion(atlas.findRegion("masculino"));
+        FEMENINO_BUTTON = new AtlasRegion(atlas.findRegion("femenino"));
+
+        BLANCO_BUTTON = new AtlasRegion(atlas.findRegion("color_blanco"));
+        CANELA_BUTTON = new AtlasRegion(atlas.findRegion("color_canela"));
+        YOEL_BUTTON = new AtlasRegion(atlas.findRegion("color_yoel"));
 
         INFO_BUTTON = new AtlasRegion(atlas.findRegion("informacion"));
         VOLOFF_BUTTON = new AtlasRegion(atlas.findRegion("voloff"));
