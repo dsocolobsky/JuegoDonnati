@@ -47,7 +47,32 @@ public class TrajesScreen extends Screen {
         fondo.setScale(0.5f);
         stage.addActor(fondo);
 
-        player = new Image(Assets.HOMBRE_BLANCO);
+        if(juego.player.hombre) {
+            switch(juego.player.color) {
+                case 1:
+                    player = new Image(Assets.HOMBRE_BLANCO);
+                    break;
+                case 2:
+                    player = new Image(Assets.HOMBRE_CANELA);
+                    break;
+                case 3:
+                    player = new Image(Assets.HOMBRE_YOEL);
+                    break;
+            }
+        } else {
+            switch(juego.player.color) {
+                case 1:
+                    player = new Image(Assets.MUJER_BLANCO);
+                    break;
+                case 2:
+                    player = new Image(Assets.MUJER_CANELA);
+                    break;
+                case 3:
+                    player = new Image(Assets.MUJER_YOEL);
+                    break;
+            }
+        }
+
         player.setPosition(60, 5);
         stage.addActor(player);
 
