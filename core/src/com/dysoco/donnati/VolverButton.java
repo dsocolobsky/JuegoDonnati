@@ -48,15 +48,15 @@ public class VolverButton extends Button {
 
     public void grande() {
         this.grande = true;
-        setSize(this.getWidth()*1.65f, this.getHeight()*1.65f);
+        setScale(1.50f);
     }
 
     @Override
     public void draw(final Batch batch, float parentAlpha) {
-        if(!grande) {
-            batch.draw(texture, this.getX(), this.getY());
+        if(grande) {
+            batch.draw(texture, 10, 420-30, 56*1.50f, 56*1.50f);
         } else {
-            batch.draw(texture, this.getX(), this.getY()-35, this.texture.getRegionWidth()*1.65f, this.texture.getRegionHeight()*1.65f);
+            batch.draw(texture, 10, 420, 56, 56);
         }
     }
 }

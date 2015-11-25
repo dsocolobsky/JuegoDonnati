@@ -28,6 +28,7 @@ public class Screen extends ScreenAdapter {
         Assets.SOUND_APPLAUSE.play();
         stage.addActor(felicitaciones);
 
+        stage.addActor(volver);
         volver.grande();
     }
 
