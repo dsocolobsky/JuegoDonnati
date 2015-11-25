@@ -122,6 +122,20 @@ public class Assets {
     public static AtlasRegion PANTALONES;
     public static AtlasRegion ZAPATOS;
 
+    public static AtlasRegion PELO1;
+    public static AtlasRegion PELO2;
+    public static AtlasRegion PELO3;
+    public static AtlasRegion PELO4;
+    public static AtlasRegion PELO5;
+    public static AtlasRegion PELO6;
+    public static AtlasRegion PELO7;
+    public static AtlasRegion PELO8;
+    public static AtlasRegion PELO9;
+    public static AtlasRegion PELO10;
+    public static AtlasRegion PELO11;
+    public static AtlasRegion PELO12;
+    public static AtlasRegion PELO13;
+
     public static AtlasRegion COCINERO_GORRO;
     public static AtlasRegion COCINERO_TRAJE;
     public static AtlasRegion COCINERO_PANTALONES;
@@ -259,10 +273,23 @@ public class Assets {
         TACO_GUACAMOLE = new AtlasRegion(atlas.findRegion("guacamole"));
         TACO_PICADA = new AtlasRegion(atlas.findRegion("picada"));
 
-        PELO = new AtlasRegion(atlas.findRegion("pelo"));
         BUZO = new AtlasRegion(atlas.findRegion("buzo"));
         PANTALONES = new AtlasRegion(atlas.findRegion("pantalones"));
         ZAPATOS = new AtlasRegion(atlas.findRegion("zapatos"));
+
+        PELO1 = new AtlasRegion(atlas.findRegion("pelo1"));
+        PELO2 = new AtlasRegion(atlas.findRegion("pelo2"));
+        PELO3 = new AtlasRegion(atlas.findRegion("pelo3"));
+        PELO4 = new AtlasRegion(atlas.findRegion("pelo4"));
+        PELO5 = new AtlasRegion(atlas.findRegion("pelo5"));
+        PELO6 = new AtlasRegion(atlas.findRegion("pelo6"));
+        PELO7 = new AtlasRegion(atlas.findRegion("pelo7"));
+        PELO8 = new AtlasRegion(atlas.findRegion("pelo8"));
+        PELO9 = new AtlasRegion(atlas.findRegion("pelo9"));
+        PELO10 = new AtlasRegion(atlas.findRegion("pelo10"));
+        PELO11 = new AtlasRegion(atlas.findRegion("pelo11"));
+        PELO12 = new AtlasRegion(atlas.findRegion("pelo12"));
+        PELO13 = new AtlasRegion(atlas.findRegion("pelo13"));
 
         COCINERO_GORRO = new AtlasRegion(atlas.findRegion("cocinero_gorro"));
         COCINERO_TRAJE = new AtlasRegion(atlas.findRegion("cocinero_traje"));

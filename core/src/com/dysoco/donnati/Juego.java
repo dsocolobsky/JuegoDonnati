@@ -23,7 +23,7 @@ public class Juego extends Game {
 
         Assets.load();
 
-        player = new Player(true, 2);
+        player = new Player(true, 1);
 
         setScreen(new EditScreen(this));
 	}
